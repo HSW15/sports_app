@@ -9,7 +9,13 @@ end
 # 1. Figaro gem to protect privacy
 gem 'figaro'
 # 2. OmniAuth Facebook gem to enable Facebook logins
-gem 'omniauth-facebook' 
+gem 'omniauth-facebook'
+# 3. Bootstrap gem to enable Bootstrap
+gem 'bootstrap-sass'
+# 4. OmniAuth gem to allow additional logging in with Google+
+gem 'omniauth'
+# 5. OmniAuth gem to log in with Google+
+gem "omniauth-google-oauth2"
 
 
 
