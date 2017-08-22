@@ -5,6 +5,14 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Manually added gems are as follows:
+# 1. Figaro gem to protect privacy
+gem 'figaro'
+# 2. OmniAuth Facebook gem to enable Facebook logins
+gem 'omniauth-facebook' 
+
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
