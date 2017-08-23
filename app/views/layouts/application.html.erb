@@ -11,7 +11,7 @@
 
     <!-- 1. Facebook Login  -->
 
-    <% if current_user %>
+    <!-- <% if current_user %>
     Signed in as <strong><%= current_user.name %></strong>!
     <%= link_to "Sign out", signout_path, id: "sign_out" %>
     <% else %>
@@ -19,9 +19,58 @@
         <li><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></li>
         <li> <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %></li>
       </ul>
-    <% end %>
+    <% end %> -->
+
+    <!-- <script>
+
+    var bgImageArray = [
+      "<%= image_url 'home-background7' %>",
+      "<%= image_url 'home-background6' %>",
+      "<%= image_url 'home-background4' %>"
+    ]
+    // base = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/full-",
+    secs = 4;
+    bgImageArray.forEach(function(imgSrc){
+        new Image().src = imgSrc;
+        // caches images, avoiding white flash between background replacements
+    });
+
+    function backgroundSequence() {
+    	window.clearTimeout();
+    	var k = 0;
+    	for (i = 0; i < bgImageArray.length; i++) {
+    		setTimeout(function(){
+    			document.documentElement.style.background = "url(" + bgImageArray[k]
+    			document.documentElement.style.backgroundSize ="cover";
+    		if ((k + 1) === bgImageArray.length) { setTimeout(function() { backgroundSequence() }, (secs * 1000))} else { k++; }
+    		}, (secs * 1000) * i)
+    	}
+    }
+    backgroundSequence();
+
+    </script> -->
+    <ul class="nav">
+      <li class="nav__item nav__item--logo"><%=image_tag("logo-1.png", :style=>"width:90px; margin-top:-14px;margin-left:-190px;") %></li>
+      <div class="nav__links">
+        <li class="nav__item">Explore</li>
+        <li class="nav__item">Join Us</li>
+        <li class="nav__item">Help</li>
+      </div>
+    </ul>
 
     <%= yield %>
+
+    <div id="footer1">
+      <ul>
+        <li>About Us</li>
+        <li>Privacy</li>
+        <li>Terms</li>
+        <li>Contact Us</li>
+      </ul>
+    </div>
+
+
+
 
   </body>
 </html>
