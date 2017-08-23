@@ -10,44 +10,47 @@
     <form id="msform">
       <!-- progressbar -->
       <ul id="progressbar">
-        <li class="active">Price Estimator</li>
-        <li>Personal Details</li>
-        <li>Your Cost</li>
+        <li class="active">Login</li>
+        <li>Location</li>
+        <li>Explore</li>
       </ul>
       <!-- fieldsets -->
       <fieldset>
-        <h2 class="fs-title">Where are you located?</h2>
-        <h3 class="fs-subtitle">We need to know a few things before giving you a price</h3>
-        <input type="text" name="zipcode" placeholder="Zipcode" />
+        <h2 class="fs-title">Welcome Back!</h2>
+        <h3 class="fs-subtitle">Always stay close to the action</h3>
+        <% if current_user %>
+           Signed in as <strong><%= current_user.name %></strong>!
+           <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <% else %>
+         <ul>
+           <li><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></li>
+           <li> <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %></li>
+         </ul>
+        <% end %>
+        <!-- <input type="password" name="sqft" placeholder="House SQFT." />
+        <input type="text" name="fullname" placeholder="Full Name" />
+        <input type="text" name="phone" placeholder="Phone" />
+        <input type="button" name="previous" class="previous action-button" value="Previous" /> -->
         <input type="button" name="next" class="next action-button" value="Next" />
       </fieldset>
       <fieldset>
-        <h2 class="fs-title">Personal Details</h2>
-        <h3 class="fs-subtitle">Almost done. Fill up your inforamtion and get a free garage door if you choose to work with us!</h3>
-        <input type="password" name="sqft" placeholder="House SQFT." />
-        <input type="text" name="fullname" placeholder="Full Name" />
-        <input type="text" name="phone" placeholder="Phone" />
+        <h2 class="fs-title">Where are you located?</h2>
+        <h3 class="fs-subtitle">We need to know a few things before customizing your trip</h3>
+        <input type="text" name="zipcode" placeholder="Country" />
+        <input type="text" name="zipcode" placeholder="Zipcode" />
         <input type="button" name="previous" class="previous action-button" value="Previous" />
         <input type="button" name="next" class="next action-button" value="Next" />
       </fieldset>
       <fieldset>
-        <h2 class="fs-title">Your Estimated Price</h2>
-        <h3 class="fs-subtitle">According to our calculations, painting your house will cost:</h3>
+        <h2 class="fs-title">What kind of traveler are you?</h2>
+        <h3 class="fs-subtitle">We're almost there</h3>
+        <input type="text" name="fullname" placeholder="Athlete, fan, organizer ..." />
+        <!-- <h3 class="fs-subtitle">According to our calculations, painting your house will cost:</h3> -->
         <input type="button" name="previous" class="previous action-button" value="Previous" />
 
       </fieldset>
     </form>
 
-    <% if current_user %>
-       Signed in as <strong><%= current_user.name %></strong>!
-       <%= link_to "Sign out", signout_path, id: "sign_out" %>
-    <% else %>
-     <ul>
-       <li><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></li>
-       <li> <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %></li>
-     </ul>
-    <% end %>
-    
   </body>
 </html>
 

@@ -25,8 +25,8 @@
 }
 /*form styles*/
 #msform {
-	width: 400px;
-	margin: 50px auto;
+	width: 600px;
+	margin: 35px auto;
 	text-align: center;
 	position: relative;
 }
@@ -57,7 +57,7 @@
 	box-sizing: border-box;
 	font-family: montserrat;
 	color: #508a98;
-	font-size: 13px;
+	font-size: 18px;
 }
 /*buttons*/
 #msform .action-button {
@@ -76,14 +76,14 @@
 }
 /*headings*/
 .fs-title {
-	font-size: 15px;
+	font-size: 24px;
 	text-transform: uppercase;
 	color: white;
 	margin-bottom: 10px;
 }
 .fs-subtitle {
 	font-weight: normal;
-	font-size: 13px;
+	font-size: 20px;
 	color: white;
 	margin-bottom: 20px;
 }
@@ -98,7 +98,7 @@
 	list-style-type: none;
 	color: white;
 	text-transform: uppercase;
-	font-size: 9px;
+	font-size: 15px;
 	width: 33.33%;
 	float: left;
 	position: relative;
@@ -109,7 +109,7 @@
 	width: 20px;
 	line-height: 20px;
 	display: block;
-	font-size: 10px;
+	font-size: 12px;
 	color: #333;
 	background: white;
 	border-radius: 3px;
