@@ -16,8 +16,8 @@ gem 'bootstrap-sass'
 gem 'omniauth'
 # 5. OmniAuth gem to log in with Google+
 gem "omniauth-google-oauth2"
-
-
+# 6. Faker gem to generate fake user names
+gem "faker"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
