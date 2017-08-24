@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy, :new]
   resource :home, only: [:show]
 
-  resources :listings
+  resources :listings, only: [:show, :index]
 
   root to: "home#show"
 
