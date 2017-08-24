@@ -1,0 +1,584 @@
+photos_jx8qn9-o_O-withModal_13xlah4 {
+    position: relative ;
+    width: 100% ;
+    background-color: #f5f5f5 ;
+    cursor: pointer ;
+}
+.hide {
+    display: none ;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+        border-top-width: 0px;
+        border-right-width: 0px;
+        border-bottom-width: 0px;
+        border-left-width: 0px;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: none;
+        border-left-style: none;
+        border-top-color: currentcolor;
+        border-right-color: currentcolor;
+        border-bottom-color: currentcolor;
+        border-left-color: currentcolor;
+        -moz-border-top-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        border-image-source: none;
+        border-image-slice: 100%;
+        border-image-width: 1;
+        border-image-outset: 0;
+        border-image-repeat: stretch stretch;
+            border-radius: 100%;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
+        border-bottom-right-radius: 100%;
+        border-bottom-left-radius: 100%;
+}
+
+.img-responsive-height {
+    width: auto;
+    height: 100%;
+}
+.coverImage_75zala {
+    background-repeat: no-repeat ;
+    background-size: cover ;
+    background-position: 50% 50% ;
+        background-position-x: 50%;
+        background-position-y: 50%;
+    height: 320px ;
+}
+.viewPhotos_bwd0sy {
+    bottom: 20px ;
+    left: 20px ;
+position: absolute ;
+right: 20px ;
+}
+.btn {
+    border-color: #c4c4c4;
+        border-top-color: rgb(196, 196, 196);
+        border-right-color: rgb(196, 196, 196);
+        border-bottom-color: rgb(196, 196, 196);
+        border-left-color: rgb(196, 196, 196);
+    background: white;
+        background-color: white;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-size: auto auto;
+    color: #484848;
+padding: 7px 21px;
+    padding-top: 7px;
+    padding-right: 21px;
+    padding-bottom: 7px;
+    padding-left: 21px;
+font-size: 14px;
+display: inline-block;
+margin-bottom: 0;
+border-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+border: 1px solid;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+-moz-border-top-colors: none;
+-moz-border-right-colors: none;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+border-image-source: none;
+border-image-slice: 100%;
+border-image-width: 1;
+border-image-outset: 0;
+border-image-repeat: stretch stretch;
+text-align: center;
+vertical-align: middle;
+font-weight: bold;
+line-height: 1.43;
+-moz-user-select: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.room__dls.room__dls--fontSize19 {
+    font-size: 19px ;
+    letter-spacing: 0 ;
+    line-height: 24px ;
+    margin-left: auto !important;
+margin-right: auto !important;
+}
+
+.room__dls {
+    color: #484848 ;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+font-weight: 300 ;
+}
+.container_p37oqd-o_O-container_staticWidth_mfbig2 {
+    max-width: 1080px ;
+padding-right: 24px ;
+padding-left: 24px ;
+margin-left: auto ;
+margin-right: auto ;
+width: auto ;
+}
+.row_2h22gn {
+    margin-left: -8px ;
+    margin-right: -8px ;
+}
+.row_2h22gn::before {
+    content: " " ;
+    display: table ;
+}
+.column_1rnz84d-o_O-column-lg-8_1gc3mvd {
+    width: 66.66666666666666% ;
+    float: left ;
+padding-left: 8px ;
+padding-right: 8px ;
+min-height: 1px ;
+position: relative ;
+}
+.row {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+.row::before, .row::after {
+    content: " ";
+    display: table;
+}
+.col-sm-12 {
+    width: 100%;
+    float: left;
+}
+.innerContainer_1yboa9e {
+    border-bottom: 1px solid #DBDBDB ;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(219, 219, 219);
+    height: 51px ;
+}
+.container_e296pg {
+    position: relative ;
+}
+nav{
+	display:block;
+}
+.text_5mbkop-o_O-size_small_1gg2mc-o_O-weight_bold_153t78d-o_O-inline_g86r3e {
+    font-weight: 700 ;
+    color: #484848 ;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+    margin: 0px ;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    word-wrap: break-word ;
+        overflow-wrap: break-word;
+    font-size: 15px ;
+    line-height: 18px ;
+    letter-spacing: 0.2px ;
+    padding-top: 0px ;
+    padding-bottom: 0px ;
+    display: inline ;
+}
+.anchor_18fdjt5 {
+    display: inline-block ;
+    padding: 16px 0 16px 0 ;
+        padding-top: 16px;
+        padding-right: 0px;
+        padding-bottom: 16px;
+        padding-left: 0px;
+}
+.component_9w5i1l-o_O-navigation_3mnosr {
+    color: #484848 ;
+font: inherit ;
+font-style: inherit;
+font-weight: inherit;
+font-size: inherit;
+line-height: inherit;
+font-size-adjust: inherit;
+font-stretch: inherit;
+-x-system-font: none;
+font-feature-settings: inherit;
+font-language-override: inherit;
+font-kerning: inherit;
+font-variant-alternates: inherit;
+    font-variant-caps: inherit;
+    font-variant-east-asian: inherit;
+    font-variant-ligatures: inherit;
+    font-variant-numeric: inherit;
+    font-variant-position: inherit;
+font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+    text-decoration: none ;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+    background: transparent;
+        background-color: transparent;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-size: auto auto;
+}
+.text_5mbkop-o_O-size_small_1gg2mc-o_O-inline_g86r3e {
+    font-weight: normal ;
+    color: #484848 ;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+    margin: 0px ;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    word-wrap: break-word ;
+        overflow-wrap: break-word;
+    font-size: 15px ;
+    line-height: 18px ;
+    letter-spacing: 0.2px ;
+    padding-top: 0px ;
+    padding-bottom: 0px ;
+    display: inline ;
+}
+.dot_t5g4kn {
+    margin: 0 4px 0 4px ;
+        margin-top: 0px;
+        margin-right: 4px;
+        margin-bottom: 0px;
+        margin-left: 4px;
+}
+.anchor_18fdjt5 {
+    display: inline-block ;
+    padding: 16px 0 16px 0 ;
+        padding-top: 16px;
+        padding-right: 0px;
+        padding-bottom: 16px;
+        padding-left: 0px;
+}
+.component_9w5i1l {
+    color: #008489 ;
+    font: inherit ;
+font-style: inherit;
+font-weight: inherit;
+font-size: inherit;
+line-height: inherit;
+font-size-adjust: inherit;
+font-stretch: inherit;
+-x-system-font: none;
+font-feature-settings: inherit;
+font-language-override: inherit;
+font-kerning: inherit;
+font-variant-alternates: inherit;
+font-variant-caps: inherit;
+font-variant-east-asian: inherit;
+font-variant-ligatures: inherit;
+font-variant-numeric: inherit;
+        font-variant-position: inherit;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+    text-decoration: none ;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+}
+.button_1t23k3h-o_O-button_backwards_d48umq-o_O-button_transition_10aqeuh {
+    background: transparent ;
+        background-color: transparent;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-size: auto auto;
+    border: 0px ;
+        border-top-width: 0px;
+        border-right-width: 0px;
+        border-bottom-width: 0px;
+        border-left-width: 0px;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: none;
+        border-left-style: none;
+        border-top-color: currentcolor;
+        border-right-color: currentcolor;
+        border-bottom-color: currentcolor;
+        border-left-color: currentcolor;
+        -moz-border-top-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        border-image-source: none;
+        border-image-slice: 100%;
+        border-image-width: 1;
+        border-image-outset: 0;
+        border-image-repeat: stretch stretch;
+    cursor: pointer ;
+    height: 100% ;
+    padding: 0px ;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    position: absolute ;
+    top: 0px ;
+    left: 0px ;
+}
+.iconContainer_769vv0-o_O-iconContainer_backwards_w1faho {
+    background-color: #ffffff ;
+    display: inline-block ;
+    height: 100% ;
+    position: relative ;
+    vertical-align: top ;
+    padding-right: 4px ;
+}
+.icon_qplzdw {
+    color: #484848 ;
+    position: relative ;
+    top: 50% ;
+    transform: translateY(-50%) ;
+}
+.gradient_3cikar-o_O-gradient_backwards_hbkrlm {
+    display: inline-block ;
+    height: 100% ;
+    vertical-align: top ;
+    width: 20px ;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff) ;
+        background-color: rgba(0, 0, 0, 0);
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-size: auto auto;
+}
+.button_1t23k3h-o_O-button_forwards_fn4ull-o_O-button_transition_10aqeuh {
+    background: transparent ;
+        background-color: transparent;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-size: auto auto;
+    border: 0px ;
+        border-top-width: 0px;
+        border-right-width: 0px;
+        border-bottom-width: 0px;
+        border-left-width: 0px;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: none;
+        border-left-style: none;
+        border-top-color: currentcolor;
+        border-right-color: currentcolor;
+        border-bottom-color: currentcolor;
+        border-left-color: currentcolor;
+        -moz-border-top-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        border-image-source: none;
+        border-image-slice: 100%;
+        border-image-width: 1;
+        border-image-outset: 0;
+        border-image-repeat: stretch stretch;
+    cursor: pointer ;
+    height: 100% ;
+    padding: 0px ;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    position: absolute ;
+    top: 0px ;
+    right: 0px ;
+    transition: opacity 300ms ease-out 0ms, visibility 300ms linear 0ms ;
+        transition-property: opacity, visibility;
+        transition-duration: 300ms, 300ms;
+        transition-timing-function: ease-out, linear;
+        transition-delay: 0ms, 0ms;
+}
+.gradient_3cikar-o_O-gradient_forwards_17ipsx {
+    display: inline-block ;
+    height: 100% ;
+    vertical-align: top ;
+    width: 20px ;
+background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff) ;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+        background-size: auto auto;
+}
+.iconContainer_769vv0-o_O-iconContainer_forwards_1sqnphj {
+    background-color: #ffffff ;
+    display: inline-block ;
+    height: 100% ;
+    position: relative ;
+    vertical-align: top ;
+    padding-left: 4px ;
+}
+.row {
+    margin-left: -12px;
+    margin-right: -12px;
+}
+.room__dls .section-container {
+    margin-bottom: 24px ;
+    margin-top: 24px ;
+}
+.room__dls .summary-container {
+    margin-bottom: 9px;
+    margin-top: 0;
+    position: relative;
+}
+.col-md-10 {
+    width: 83.33333%;
+    float: left;
+}
+.room__dls .summary-title-bottom-spacing {
+    margin-bottom: 6px;
+}
+.room__dls .title-2 {
+    font-size: 36px ;
+    font-weight: 700 ;
+    letter-spacing: -0.6px ;
+    line-height: 44px ;
+    padding-bottom: 6px ;
+    padding-top: 6px ;
+    word-wrap: break-word ;
+        overflow-wrap: break-word;
+}
+.text-muted {
+    color: #767676;
+}
+.link-reset {
+    color: inherit;
+    text-decoration: none;
+        text-decoration-color: currentcolor;
+        text-decoration-line: none;
+        text-decoration-style: solid;
+    background: transparent;
+        background-color: transparent;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-size: auto auto;
+}
+.show-inline-block {
+    display: inline-block ;
+}
+.star-rating {
+    display: inline-block;
+    position: relative;
+}
+.star_1c8pmxm-o_O-star_colorBabu_185kh56-o_O-star_sizeSmall_efbia6 {
+    display: inline-block ;
+    color: #008489 ;
+    font-size: 12px ;
+    height: 12px ;
+    margin-right: 3px ;
+    width: 12px ;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    line-height: 1.1;
+    text-rendering: optimizelegibility;
+}
+h6, .h6 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #767676;
+    line-height: 1.1;
+    text-rendering: optimizelegibility;
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+    color: #767676;
+}
+small {
+    font-size: 0.85em;
+}
+.text_5mbkop-o_O-size_reduced_1oti1ib-o_O-weight_light_1nmzz2x-o_O-color_muted_10k87om-o_O-inline_g86r3e {
+    font-weight: 300 ;
+    color: #767676 ;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+margin: 0px ;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+word-wrap: break-word ;
+    overflow-wrap: break-word;
+font-size: 17px ;
+line-height: 22px ;
+letter-spacing: 0.2px ;
+display: inline ;
+}
+
+.rule_76irmj {
+    border-bottom: 1px solid #DBDBDB !important;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgb(219, 219, 219);
+}
+.row_2h22gn {
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+}
+.column_1rnz84d-o_O-column-sm-3_1c7jm1s {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    min-height: 1px !important;
+    position: relative !important;
+    width: 25% !important;
+    float: left !important;
+}
+.room__dls .icon-size {
+    font-size: 1.8em !important;
+}
+
+.room__dls .text-small {
+    font-size: 15px !important;
+    line-height: 18px !important;
+}
+
+.the_descriptions {
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+    font-size: 19px !important;
+letter-spacing: 0 !important;
+line-height: 24px !important;
+color: #484848 !important;
+font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+display:table;
+}
