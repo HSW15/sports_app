@@ -16,8 +16,17 @@
 # end
 
 ActiveRecord::Base.transaction do
-  40.times do
-    Listing.create(name: Faker::App.name, location:Faker::Address.city, description:Faker::Hipster.sentence, price: rand(50..500), max_guests: rand(10..100), purpose: rand(0..3)  )
+  # 8 Listings
+    Listing.create(name: "House", location:Faker::Address.city, description:Faker::Hipster.sentence, price: rand(50..500), max_guests: rand(10..100), purpose: "hotel", photos: "href link" )
+  # 5 Training Facility
+  # Listing.create( ...... purpose:"train")
+
+  # 5 Nutrition
+  # Listing.create(...purpose:"nutrition")
+
+
+
+
     # listing['name'] = Faker::App.name
     # listing['location'] = Faker::Address.city
     # listing['description'] = Faker::Hipster.sentence
