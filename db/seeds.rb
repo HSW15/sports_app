@@ -14,3 +14,16 @@
     User.create(name: Faker::Name.name)
   end
 # end
+
+ActiveRecord::Base.transaction do
+  40.times do
+    Listing.create(name: Faker::App.name, location:Faker::Address.city, description:Faker::Hipster.sentence, price: rand(50..500), max_guests: rand(10..100), purpose: rand(0..3)  )
+    # listing['name'] = Faker::App.name
+    # listing['location'] = Faker::Address.city
+    # listing['description'] = Faker::Hipster.sentence
+    # listing['price'] = rand(50..500)
+    # listing['max_guests'] = rand(10..100)
+    # listing['type'] = ["hotel","nutrition","train","visit"]
+    # Listing.create(listing)
+  end
+end

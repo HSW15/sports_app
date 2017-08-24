@@ -18,9 +18,11 @@ gem 'omniauth'
 gem "omniauth-google-oauth2"
 # 6. Faker gem to generate fake user names
 gem "faker"
-# 7. Carrierwave gem to upload image
+# 7. Kaminari gem to paginate
+gem 'kaminari'
+# 8. Carrierwave gem to upload image
 gem 'carrierwave', '~> 1.0'
-# 8. Minimagick gem
+# 9. Minimagick gem
 gem "mini_magick"
 
 
