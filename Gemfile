@@ -20,6 +20,10 @@ gem "omniauth-google-oauth2"
 gem "faker"
 # 7. Kaminari gem to paginate
 gem 'kaminari'
+# 8. Carrierwave gem to upload image
+gem 'carrierwave', '~> 1.0'
+# 9. Minimagick gem
+gem "mini_magick"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
