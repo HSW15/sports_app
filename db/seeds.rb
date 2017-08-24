@@ -21,7 +21,7 @@ ActiveRecord::Base.transaction do
 
     Listing.create(name: "Shang-rila Hotel", location:"11, Jalan Sultan Ismail, Bukit Bintang, 50250 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia", description:"With an enviable location close to Kuala Lumpur's commercial and entertainment districts, Shangri-la Hotel is ideally placed for exploring the city. The nearby metro station connects to Chinatown and Central Market, while the shopping malls at Bukit Bintang and KLCC are easily accessible.", price: 150, max_guests: 3, purpose: "hotel", photos: "http://needwant.com/wp-content/uploads/2013/11/2013-04-12-16.58.50-2.jpg" )
 
-    Listing.create(name: "Concorde Hotel", location:"2, Jalan Sultan Ismail, Kuala Lumpur, 50250 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia", description:"This fully serviced, 4-star business class property is ideally located in the Golden Triangle of Kuala Lumpur, offering easy access to the thriving central business district and famous tourist attractions. All excellent attractions are just an easy stroll away, including Malaysia Tourism Center, Suria KLCC Shopping Center, Petronas Twin Towers, Kuala Lumpur Convention Center, and Kuala Lumpur Tower", price: 170, max_guests: 2, purpose: "hotel", photos: "http://thetaleoftwotings.com/wp-content/uploads/2014/01/P1160797.jpg"
+    Listing.create(name: "Concorde Hotel", location:"2, Jalan Sultan Ismail, Kuala Lumpur, 50250 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia", description:"This fully serviced, 4-star business class property is ideally located in the Golden Triangle of Kuala Lumpur, offering easy access to the thriving central business district and famous tourist attractions. All excellent attractions are just an easy stroll away, including Malaysia Tourism Center, Suria KLCC Shopping Center, Petronas Twin Towers, Kuala Lumpur Convention Center, and Kuala Lumpur Tower", price: 170, max_guests: 2, purpose: "hotel", photos: "http://thetaleoftwotings.com/wp-content/uploads/2014/01/P1160797.jpg")
 
     Listing.create(name: "Cititel Midvalley Hotel", location:"Lingkaran Syed Putra, Mid Valley City, 59200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia", description:"Boasting a convenient location in Kuala Lumpur, this property is minutes away from major tourist hot spots. Within the vicinity of popular malls, entertainment centers, and the thriving business district, guests will find this superb lodge fantastic!", price: 180, max_guests: 3, purpose: "hotel", photos: "https://a0.muscache.com/im/pictures/9154330/a0700176_original.jpg?aki_policy=xx_large" )
 
@@ -70,5 +70,5 @@ ActiveRecord::Base.transaction do
       # listing['max_guests'] = rand(10..100)
       # listing['type'] = ["hotel","nutrition","train","visit"]
       # Listing.create(listing)
-    end
+  
   end
