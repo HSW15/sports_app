@@ -1,4 +1,3 @@
 class Listing < ApplicationRecord
-  def show
-  end 
+  has_many :reservations
 end

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/events_show', to: 'home#event', as: 'events_show'
   resources :sessions, only: [:create, :destroy, :new]
   resource :home, only: [:show]
-	
+  resources :reservations, only: [:new, :create, :destroy]
   resources :listings
 
   root to: "home#show"
