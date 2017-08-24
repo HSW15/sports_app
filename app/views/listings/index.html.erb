@@ -1,45 +1,72 @@
 <body class="listing_index_body2">
-  <body>
 
-	<div>
+	<div style="width:196px;margin-left:auto;margin-right:auto;">
 
+		    <input stylechecked id="one" name="multiples" type="radio" value="1">
+        <label for="one"></label>
 
-		<input checked id="one" name="multiples" type="radio" value="1">
-        <label for="one">1</label>
-
-		<input id="two" name="multiples" type="radio" value="2">
-        <label for="two">2</label>
+		    <input id="two" name="multiples" type="radio" value="2">
+        <label for="two"></label>
 
         <input id="three" name="multiples" type="radio" value="3">
-        <label for="three">3</label>
+        <label for="three"></label>
 
         <input id="four" name="multiples" type="radio" value="4">
-        <label for="four">4</label>
+        <label for="four"></label>
 
         <input id="five" name="multiples" type="radio" value="5">
-        <label for="five">5</label>
+        <label for="five"></label>
 
         <input id="six" name="multiples" type="radio" value="6">
-        <label for="six">6</label>
+        <label for="six"></label>
 
         <input id="seven" name="multiples" type="radio" value="7">
-        <label for="seven">7</label>
+        <label for="seven"></label>
 
         <input id="eight" name="multiples" type="radio" value="8">
-        <label for="eight">8</label>
+        <label for="eight"></label>
 
 		<div class="container">
-			<div class="carousel prices">
+			<div class="carousel prices" style="margin-top:0px;margin-left:-179px;">
 
-        <% @hotel[0..7].each do |x| %>
-				<img src="http://thetaleoftwotings.com/wp-content/uploads/2014/01/P1160797.jpg" alt="Landscape 3">
-				<img src="https://businessfirstfamily.com/wp-content/uploads/2017/02/luxury-retreats-acquired-airbnb.jpg" alt="Landscape 2">
-				<img src="https://a0.muscache.com/im/pictures/9154330/a0700176_original.jpg?aki_policy=xx_large" alt="Landscape 1">
+			<!-- <div class="img"><img src="  http://needwant.com/wp-content/uploads/2013/11/2013-04-12-16.58.50-2.jpg" alt="Landscape 1"></div> -->
+      <div class="price-stamp"></div>
+				<img src="http://thetaleoftwotings.com/wp-content/uploads/2014/01/P1160797.jpg" alt="Landscape 2">
+				<img src="https://a0.muscache.com/im/pictures/9154330/a0700176_original.jpg?aki_policy=xx_large" alt="Landscape 3">
 				<img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/13133201_619510394864844_3333733000320571527_n.jpg?oh=76bb4a3ed4c211b3472119cfbb231507&oe=5A315217" alt="Landscape 4">
 				<img src="http://blog.tortugabackpacks.com/wp-content/uploads/2017/06/airbnb-alternatives.jpg" alt="Landscape 5">
-				<img src="http://needwant.com/wp-content/uploads/2013/11/2013-04-12-16.58.50-2.jpg" alt="Landscape 6">
+				<img src="https://businessfirstfamily.com/wp-content/uploads/2017/02/luxury-retreats-acquired-airbnb.jpg" alt="Landscape 6">
 				<img src="http://www.cpp-luxury.com/wp-content/uploads/2017/06/Public-Hotel-New-York-Ian-Schrager.jpg" alt="Landscape 7">
 				<img src="https://media.cntraveler.com/photos/56e31b19c3ce11fb6b06be36/master/pass/one-fine-stay-bedroom-interior.png" alt="Landscape 8">
+        <!-- Captions -->
+        <div class="carousel-caption" style="-webkit-transform: rotateY(45deg) translateZ(540px) scale(.8);">
+           <h3><%=link_to "#{@hotel[0].name}", listings_path("#{@hotel[0].id}"), style:"text-decoration:none;"%></h3>
+           <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(90deg) translateZ(540px) scale(.8);">
+            <!-- <h3><%=link_to "#{@hotel[1].name}", listings_path("#{@hotel[1].id}"), style:"text-decoration:none;"%></h3> -->
+            <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(135deg) translateZ(540px) scale(.8);">
+           <!-- <h3><%=link_to "#{@hotel[2].name}", listings_path("#{@hotel[2].id}"), style:"text-decoration:none;"%></h3> -->
+           <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(180deg) translateZ(540px) scale(.8);">
+            <!-- <h3><%=link_to "#{@hotel[3].name}", listings_path("#{@hotel[3].id}"), style:"text-decoration:none;"%></h3> -->
+            <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(225deg) translateZ(540px) scale(.8);">
+           <!-- <h3><%=link_to "#{@hotel[4].name}", listings_path("#{@hotel[4].id}"), style:"text-decoration:none;"%></h3> -->
+           <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(270deg) translateZ(540px) scale(.8);">
+            <!-- <h3><%=link_to "#{@hotel[5].name}", listings_path("#{@hotel[5].id}"), style:"text-decoration:none;"%></h3> -->
+            <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(315deg) translateZ(540px) scale(.8);">
+           <!-- <h3><%=link_to "#{@hotel[6].name}", listings_path("#{@hotel[6].id}"), style:"text-decoration:none;"%></h3> -->
+           <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
 
 
 			</div>
@@ -48,4 +75,19 @@
 	</div>
 
 </body>
-</body>
+
+<style>
+.carousel-caption
+			{
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 10;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				color: #fff;
+				text-align: center;
+				background: rgba(0,0,0,0.4);
+			}
+</style>
