@@ -18,6 +18,10 @@ gem 'omniauth'
 gem "omniauth-google-oauth2"
 # 6. Faker gem to generate fake user names
 gem "faker"
+# 7. Carrierwave gem to upload image
+gem 'carrierwave', '~> 1.0'
+# 8. Minimagick gem
+gem "mini_magick"
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
