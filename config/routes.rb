@@ -14,4 +14,7 @@ Rails.application.routes.draw do
 
   root to: "home#show"
 
+  get "reservations/:id/payment", to: "reservations#payment", as: "go_payment"
+  post "reservations/:id/checkout", to: "reservations#checkout", as: "go_checkout"
+
 end

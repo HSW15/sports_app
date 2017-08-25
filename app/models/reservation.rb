@@ -5,7 +5,7 @@ class Reservation < ApplicationRecord
 
   def no_overlap
 
-    conflict = self.listing.reservations.where('(start_date <= ? AND end_date >= ?) OR (start_date >= ? AND end_date <= ?)', self.end_date, self.end_date, self.start_date, self.start_date)
+    conflict = self.listing.reservations.where('((start_date <= ? AND end_date >= ?) OR (start_date >= ? AND end_date <= ?)) AND (id != ?)', self.end_date, self.end_date, self.start_date, self.start_date, self.id)
 
     unless conflict.empty?
       errors.add(:no_overlap, 'Your request conflicts with existing bookings.')
