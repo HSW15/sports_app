@@ -1,3 +1,5 @@
+<body class="listing_show_body">
+<h1> <%= @listing.name %> </h1>
 <div class="body">
 <div class="listing-picture" style="padding-top: 77px;">
 	<div data-reactid="97"><!-- react-empty: 98 --><!-- react-empty: 99 -->
@@ -265,6 +267,39 @@
 	</div>
 	</div>
 </div>
+
+<%= link_to "Reserve this listing", new_listing_reservation_path(@listing.id) %>
+</body>
+
+<style>
+body {
+	background-color: grey;
+}
+#footer1 {
+	display:none;
+  clear: both;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  @media screen and (min-height: 400px) {
+      margin-bottom: -200px;
+  }
+  left: 0;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: auto;
+  ul {
+    li {
+      float: left;
+      margin-right: 20px;
+      list-style: none;
+      display: inline;
+    }
+  }
+}
+
+</style>
 
 <script>
 $(document).ready(function(){

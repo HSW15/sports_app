@@ -24,6 +24,17 @@ gem 'kaminari'
 gem 'carrierwave', '~> 1.0'
 # 9. Minimagick gem
 gem "mini_magick"
+#10. Enable queueing for background processing
+gem 'sidekiq'
+#11. To view email text without sending
+gem "letter_opener", :group => :development
+#12. Braintree payment
+gem 'braintree'
+#13. To be a server that is given requests by other computers
+gem 'rest-client'
+#14. Datepicker gems
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

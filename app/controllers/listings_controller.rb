@@ -11,6 +11,7 @@ class ListingsController < ApplicationController
 
   # Read - Show
   def show
+    @listing = Listing.find(params[:id])
   end
 
   private
