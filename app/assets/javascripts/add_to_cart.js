@@ -91,7 +91,7 @@ jQuery(document).ready(function($){
 		//you should insert an item with the selected product info
 		//replace productId, productName, price and url with your real product info
 		productId = productId + 1;
-		var productAdded = $('<li style="margin-left:-75px;" class="product"><div class="product-details"><h3><a href="#0" style="text-decoration:none;">Premium Tickets</a></h3><span class="price">$50</span><div class="actions"><a href="#0" class="delete-item" style="text-decoration:none;">Delete</a><div class="quantity"><label for="cd-product-'+ productId +'">Qty</label><span class="select"><select id="cd-product-'+ productId +'" name="quantity"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></span></div></div></div></li>');
+		var productAdded = $('<li style="margin-left:-75px;" class="product"><div class="product-details"><h3><a href="#0" style="text-decoration:none;">Premium Tickets</a></h3><span class="price">$50.99</span><div class="actions"><a href="#0" class="delete-item" style="text-decoration:none;">Delete</a><div class="quantity"><label for="cd-product-'+ productId +'">Qty</label><span class="select"><select id="cd-product-'+ productId +'" name="quantity"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></span></div></div></div></li>');
 		cartList.prepend(productAdded);
 	}
 
