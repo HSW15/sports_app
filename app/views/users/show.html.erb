@@ -1,0 +1,116 @@
+
+<html class="page3html">
+
+  <body class="page3body">
+
+
+<div class="profile_bar">
+  <div class="container2">
+	<div class="innerwrap">
+
+    <!-- </div> -->
+
+<br>
+
+
+<div class="container_body">
+	<div class="innerwrap">
+		<section class="section1 clearfix">
+			<div>
+				<div class="row grid clearfix">
+					<div class="col2 first">
+						<img src="http://images.contactmusic.com/newsimages/david_beckham_1133321.jpg" alt="">
+						<h1>david beckham</h1>
+						<p><p>Professional soccer player, husband, father. England.<br><i><%= current_user.name %></i></br></p>
+
+
+					</div>
+          <span>Follow</span>
+
+					</div>
+				</div>
+      </section>
+
+				</div>
+			</div>
+
+      <div class="row clearfix" style="width:1037px; margin-left:auto;margin-right:auto;">
+        <ul class="row2tab clearfix">
+          <li><i class="fa fa-check"></i> <%=link_to "My Reservations", user_path, :style=>"text-decoration:none;"%> </li>
+          <li><i class="fa fa-list-alt"></i> <%=link_to "Travel Guide", listings_path, :style=>"text-decoration:none;"%> </li>
+          <li><i class="fa fa-bar-chart"></i>Events</li>
+          <li><i class="fa fa-dashboard "></i> Manage Profile </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<% if current_user.reservations.present? %>
+<section class="gallery" style="margin-top:-170px;">
+
+		<div class="prices" style="margin-left:auto;margin-right:auto;">
+
+      <% current_user.reservations.each do |x| %>
+      <% @listing = Listing.find(x.listing_id) %>
+      <!-- <div class="description" style="text-align:center;">
+        <h3 style="font-weight:thick;">Formula 1 Grand Prix</h3>
+      </div> -->
+
+			<div class="img"><img src="https://a2.muscache.com/im/pictures/6152848/b04eddeb_original.jpg?aki_policy=x_medium"></div>
+      <div class="img"><img src="https://a2.muscache.com/im/pictures/34792065/bae84a3f_original.jpg?aki_policy=x_medium"></div>
+      <div class="img"><img src="https://a2.muscache.com/im/pictures/1faf9a4c-f839-44da-bd37-65ddc928379e.jpg?aki_policy=x_medium"></div>
+				<div class="price-stamp">$<%=x.total%></div>
+				<div class="description" style="text-align:center;">
+					<h4><%= link_to "#{@listing.name}", listing_path(@listing.id), :style=>"text-decoration:none;"%></h4>
+          <h5> <%= x.start_date.strftime("%B %d, %Y") %> to <%= x.end_date.strftime("%B %d, %Y") %> </h5>
+				</div>
+
+        <% end %>
+			</div>
+
+		</div>
+</section>
+<% else %>
+<h4> You have no reservations yet. Are you interested in any of these sporting events? </h4>
+<% end %>
+
+
+  </body>
+</html>
+
+<style>
+#footer1 { margin-bottom: -500px;}
+</style>
+
+<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker5').datetimepicker({
+                    minDate: "<%=DateTime.now%>",
+                    defaultDate: "<%=DateTime.now%>",
+                    disabledDates: [
+                        moment("12/25/2013"),
+                        new Date(2013, 11 - 1, 21),
+                        "11/22/2013 00:53"
+                    ]
+                });
+          $("#datetimepicker5").on("dp.change", function (e) {
+           $('#datetimepicker6').data("DateTimePicker").minDate(e.date);
+       });
+            });
+            $(function () {
+                $('#datetimepicker6').datetimepicker({
+                    minDate: "<%=DateTime.now%>",
+                    defaultDate: "<%=DateTime.now%>",
+                    disabledDates: [
+                        moment("12/25/2013"),
+                        new Date(2013, 11 - 1, 21),
+                        "11/22/2013 00:53"
+                    ]
+                });
+            $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker5').data("DateTimePicker").maxDate(e.date);
+        });
+            });
+        </script>

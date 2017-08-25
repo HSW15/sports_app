@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/events_show', to: 'home#eventpageprofile', as: 'events_show'
   resources :sessions, only: [:create, :destroy, :new]
   resource :home, only: [:show]
+  resources :users, only: [:show]
   resources :listings do
     resources :reservations, only: [:new, :index, :create, :destroy]
   end

@@ -54,16 +54,22 @@
     <ul class="nav">
       <li class="nav__item nav__item--logo"><%=image_tag("logo-1.png", :style=>"width:90px; margin-top:-14.75px;margin-left:-205px;") %></li>
       <div class="nav__links">
-        <% if session[:user_id].present? -%>
+        <% if session[:user_id].present?%>
+        <li class="nav__item">
+        <%= link_to "My Profile", user_path(current_user.id), {:style=>'color:white;text-decoration:none;'}%>
+        </li>
+        <% else -%>
+        <li class="nav__item">Explore</li>
+        <!-- <li class="nav__item">Help</li> -->
+        <% end -%>
+        <% if session[:user_id].present?%>
           <li class="nav__item">Plan your trip</li>
         <% else -%>
           <li class="nav__item">Join Us</li>
         <% end -%>
-        <li class="nav__item">Explore</li>
-        <!-- <li class="nav__item">Help</li> -->
 
         <li class="nav__item">
-        <% if session[:user_id].present? -%>
+        <% if session[:user_id].present?%>
           <div style="margin-top:-0.515px;">
           <%= link_to "Log Out", signout_path, method: :delete, :style=>"text-decoration:none;color:white;" %>
           </div>
