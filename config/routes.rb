@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure', to: redirect('/')
   get '/signout', to: 'sessions#destroy', as: 'signout'
-  get '/events_show', to: 'home#event', as: 'events_show'
+  get '/feedback', to: 'home#event', as: 'feedback'
+  get '/events_show', to: 'home#eventpageprofile', as: 'events_show'
   resources :sessions, only: [:create, :destroy, :new]
   resource :home, only: [:show]
   resources :listings do
