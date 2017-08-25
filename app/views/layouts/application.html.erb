@@ -52,16 +52,19 @@
 
     </script> -->
     <ul class="nav">
-      <li class="nav__item nav__item--logo"><%=image_tag("logo-1.png", :style=>"width:90px; margin-top:-14.5px;margin-left:-190px;") %></li>
+      <li class="nav__item nav__item--logo"><%=image_tag("logo-1.png", :style=>"width:90px; margin-top:-14.75px;margin-left:-205px;") %></li>
       <div class="nav__links">
-
+        <% if session[:user_id].present? -%>
+          <li class="nav__item">Plan your trip</li>
+        <% else -%>
+          <li class="nav__item">Join Us</li>
+        <% end -%>
         <li class="nav__item">Explore</li>
-        <li class="nav__item">Join Us</li>
         <!-- <li class="nav__item">Help</li> -->
 
         <li class="nav__item">
         <% if session[:user_id].present? -%>
-          <div style="margin-top:-0.5px;">
+          <div style="margin-top:-0.515px;">
           <%= link_to "Log Out", signout_path, method: :delete, :style=>"text-decoration:none;color:white;" %>
           </div>
         <% else -%>
@@ -71,8 +74,8 @@
         <% end -%>
         <li class="nav__item">
         <% if session[:user_id].present? %>
-          <%= image_tag (current_user.avatars), class: 'img-circle', style:"margin-top:-9px;margin-left:-30px;border-radius:100%;height:40%"  %>
-          </li>
+          <%= image_tag (current_user.avatars), class: 'img-circle', style:"margin-top:-9px;margin-left:-40px;border-radius:100%;height:40%"  %>
+        </li>
         <% end %>
       </li>
       </div>
