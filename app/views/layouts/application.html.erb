@@ -71,7 +71,7 @@
         <li class="nav__item">
         <% if session[:user_id].present?%>
           <div style="margin-top:-0.515px;">
-          <%= link_to "Log Out", signout_path, method: :delete, :style=>"text-decoration:none;color:white;" %>
+          <%= link_to "Log Out", signout_path, method: :get, :style=>"text-decoration:none;color:white;" %>
           </div>
         <% else -%>
           <div style="margin-top:-0.5156127px; padding:0 0 0 0px;">
