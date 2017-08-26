@@ -17,44 +17,18 @@
 <div class ="load_modal">
 	<div class="notifications" style="margin-top:7px;">
 
-	  <div class="notify gr">
-	    <%= image_tag ("admin1.jpg"), class: 'img-circle', style:"margin-top:11.5px;margin-left:10px;"%>
-	    <div class="info" style="margin-top:-21px;margin-left:-4px;">
-	      <span>Hi, I'm Jagan. Let's go!</span>
-				<b style="font-size:14px;margin-top:5px;">Step 1: </b><span style="font-size:14px;">Choose a game or event.</span><br>
-	      <span><%=Time.now.strftime("%I:%M%p")%></span>
+	  <div class="notify gr" style="background: linear-gradient(to bottom, rgba(254,187,187,1) 0%,rgba(254,144,144,1) 45%,rgba(255,92,92,1) 100%);">
+
+	    <%= image_tag ("admin4.jpg"), class: 'img-circle', style:"border-color:gray;border-width:2.5px;border-style:solid;margin-top:8.5px;margin-left:10px;"%>
+	    <div class="info" style="margin-top:-26px;margin-left:-4px;">
+	     <div style="margin-bottom:4px;"> <span style="font-size:14px;">Hi, <%=current_user.name%>!</span></div>
+				<b style="font-size:13px;margin-top:0px;">Step 1: </b><span style="font-size:13px;">Choose a game or event</span>
+	      <div><span style="font-weight:normal;font-size:12px;color:gray;float:none;margin-top:4px;"><%=Time.now.strftime("%I:%M%p")%></span>
 	    </div>
+		</div>
+
 	  </div>
 
-	  <!-- <div class="notify rd">
-	    <div class="circle">
-	      <i class="icon-ok"></i>
-	    </div>
-	    <div class="info">
-	      <span>Download Complete</span>
-	      <span>165MB <a href="#">Codepen.io</a> 1:41 PM</span>
-	    </div>
-	  </div>
-
-	  <div class="notify or">
-	    <div class="circle">
-	      <i class="icon-ok"></i>
-	    </div>
-	    <div class="info">
-	      <span>Download Complete</span>
-	      <span>165MB <a href="#">Codepen.io</a> 1:41 PM</span>
-	    </div>
-	  </div>
-
-	  <div class="notify bl">
-	    <div class="circle">
-	      <i class="icon-ok"></i>
-	    </div>
-	    <div class="info">
-	      <span>Download Complete</span>
-	      <span>165MB <a href="#">Codepen.io</a> 1:41 PM</span>
-	    </div>
-	  </div> -->
 	</div>
 </div>
 <script>
@@ -75,7 +49,7 @@ $('.load_modal').click( function() {
 		</div>
 	</a>
 	</div>
-	<div class="cd-projects-container" style="margin-top:0px;">
+	<div class="cd-projects-container" style="margin-top:-130px;">
 		<ul class="cd-projects-previews" style="padding-left: 0px;">
 			<li class="bg-loaded1">
 				<a href="#0">

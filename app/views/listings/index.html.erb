@@ -1,4 +1,30 @@
 <body class="listing_index_body2">
+	<div class ="load_modal">
+		<div class="notifications" style="margin-top:4.25px;">
+
+		  <div class="notify gr">
+
+		    <%= image_tag ("admin4.jpg"), class: 'img-circle', style:"border-color:gray;border-width:2.5px;border-style:solid;margin-top:8.5px;margin-left:10px;"%>
+		    <div class="info" style="margin-top:-27px;margin-left:-4px;">
+		     <div style="margin-bottom:-2px;"> <span style="font-size:13px;">Great Job, <%=current_user.name%>!</span></div>
+					<b style="font-size:12px;margin-top:-2px;">Step 2: </b><span style="font-size:13px;">Choose a hotel</span>
+		      <div><span style="font-weight:normal;font-size:11px;color:gray;float:none;margin-top:0px;"><%=Time.now.strftime("%I:%M%p")%></span>
+		    </div>
+			</div>
+
+		  </div>
+
+		</div>
+	</div>
+	<script>
+	console.log("hi");
+	$('body').click(function(e){ console.log(e.target) })
+	$('.load_modal').click( function() {
+		debugger;
+
+	  $(this).fadeOut();
+	});
+	</script>
 
 	<div style="width:206px;margin-left:auto;margin-right:auto;">
 

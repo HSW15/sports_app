@@ -17,7 +17,8 @@ $orange: hsl(24, 54%, 53%);
 .notify {
   width: 300px;
   height: 70px;
-  background-color: $white;
+  background: -webkit-linear-gradient(top, rgba(241,231,103,1) 0%,rgba(254,182,69,1) 100%);
+  // background-color: #FFDF00;
   border-radius: 7px;
   box-shadow: 0 1px 4px darken($dblue, 5%);
   overflow: hidden;
@@ -38,7 +39,7 @@ $orange: hsl(24, 54%, 53%);
   padding: 10px 0 10px 13px;
 }
 .gr > .circle { background-color: $green; }
-.gr > .info span:first-child { color: $green; }
+.gr > .info span:first-child { color: black; }
 .rd > .circle { background-color: $red; }
 .rd > .info span:first-child { color: $red; }
 .or > .circle { background-color: $orange; }
@@ -68,4 +69,5 @@ $orange: hsl(24, 54%, 53%);
   text-decoration: none;
   font-weight: 600;
 }
+
 }
