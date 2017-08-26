@@ -1,3 +1,4 @@
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 
 
@@ -12,9 +13,61 @@
 
 
 
+<body class="trialanderror" style="background-color:black;">
+<div class ="load_modal">
+	<div class="notifications" style="margin-top:7px;">
+
+	  <div class="notify gr">
+	    <%= image_tag ("admin1.jpg"), class: 'img-circle', style:"margin-top:11.5px;margin-left:10px;"%>
+	    <div class="info" style="margin-top:-21px;margin-left:-4px;">
+	      <span>Hi, I'm Jagan. Let's go!</span>
+				<b style="font-size:14px;margin-top:5px;">Step 1: </b><span style="font-size:14px;">Choose a game or event.</span><br>
+	      <span><%=Time.now.strftime("%I:%M%p")%></span>
+	    </div>
+	  </div>
+
+	  <!-- <div class="notify rd">
+	    <div class="circle">
+	      <i class="icon-ok"></i>
+	    </div>
+	    <div class="info">
+	      <span>Download Complete</span>
+	      <span>165MB <a href="#">Codepen.io</a> 1:41 PM</span>
+	    </div>
+	  </div>
+
+	  <div class="notify or">
+	    <div class="circle">
+	      <i class="icon-ok"></i>
+	    </div>
+	    <div class="info">
+	      <span>Download Complete</span>
+	      <span>165MB <a href="#">Codepen.io</a> 1:41 PM</span>
+	    </div>
+	  </div>
+
+	  <div class="notify bl">
+	    <div class="circle">
+	      <i class="icon-ok"></i>
+	    </div>
+	    <div class="info">
+	      <span>Download Complete</span>
+	      <span>165MB <a href="#">Codepen.io</a> 1:41 PM</span>
+	    </div>
+	  </div> -->
+	</div>
+</div>
+<script>
+console.log("hi");
+$('body').click(function(e){ console.log(e.target) })
+$('.load_modal').click( function() {
+	debugger;
+
+  $(this).fadeOut();
+});
+</script>
 
 
-<body class="trialanderror">
 	<div class="nav_button_event_page">
 	<a class="cd-nav-trigger cd-text-replace" href="#">Menu
 		<div>
@@ -22,7 +75,7 @@
 		</div>
 	</a>
 	</div>
-	<div class="cd-projects-container" style="margin-top:-130px;">
+	<div class="cd-projects-container" style="margin-top:0px;">
 		<ul class="cd-projects-previews" style="padding-left: 0px;">
 			<li class="bg-loaded1">
 				<a href="#0">
