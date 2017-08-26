@@ -11,17 +11,18 @@
 .sessions_new_background {
   padding: 0;
   margin: 0;
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.175),
-      rgba(0, 0, 0, 0.175)
-    ),
-  asset_url("sessions-background1.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  background-size: cover;
-  font-family: 'Open Sans', sans-serif;
+  background-color: black;
+  // background:
+  //   linear-gradient(
+  //     rgba(0, 0, 0, 0.175),
+  //     rgba(0, 0, 0, 0.175)
+  //   ),
+  // asset_url("sessions-background1.jpg") no-repeat center center fixed;
+  //   -webkit-background-size: cover;
+  //   -moz-background-size: cover;
+  //   -o-background-size: cover;
+  // background-size: cover;
+  // font-family: 'Open Sans', sans-serif;
 }
 /*form styles*/
 #msform {
