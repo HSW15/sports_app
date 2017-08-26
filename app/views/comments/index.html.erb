@@ -1,0 +1,15 @@
+<h1>Amazing Reviews</h1>
+<h2>Online Retail Testimonial Style</h2>
+<div class=amazing-reviews>
+  <blockquote>
+    <header>
+      <%= @comments.each do |comment| %>
+      <strong>Ullamco laboris!</strong>
+      <span>, <%= comment.updated_at %></span>
+      <span>By <em><%=current_user.name %></em></span>
+      <span>Verified Purchase</span>
+    </header>
+    <p><%= comment.description %></p>
+  </blockquote>
+  <% end %>
+</div>

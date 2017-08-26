@@ -70,5 +70,5 @@ ActiveRecord::Base.transaction do
       # listing['max_guests'] = rand(10..100)
       # listing['type'] = ["hotel","nutrition","train","visit"]
       # Listing.create(listing)
-  
+
   end
