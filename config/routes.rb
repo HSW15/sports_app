@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'carts/show'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get '/auth/:provider/callback', to: 'sessions#create'
   get '/auth/failure', to: redirect('/')
@@ -18,5 +20,10 @@ Rails.application.routes.draw do
   get "reservations/:id/payment", to: "reservations#payment", as: "go_payment"
   post "reservations/:id/checkout", to: "reservations#checkout", as: "go_checkout"
 
+  # Cart
+  resource :cart, only: [:show]
+
+  resources :products
+  resources :order_items
 
 end

@@ -1,3 +1,22 @@
+
+<!-- <% @products.each do |product| %> -->
+ <!-- <p><%= product.name %> | <%= number_to_currency product.price %> -->
+ <% @product = @products[0] %>
+ <%= form_for @order_item do |f| %>
+   <!-- <div class="input-group input-xs col-xs-2" style="margin-left:10px;width:10%;">
+     <%= f.hidden_field :product_id, value: @product.id %>
+     <%= f.number_field :quantity, value: 0, class:"form-control input-sm", min: 0 %>
+     <div class="input-group-btn">
+       <%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
+     </div>
+   </div>
+ <% end %></p>
+<% end %> -->
+
+
+
+
+
 <div class="nav_bar_listings">
 	<main id="site-content" role="main" tabindex="-1">
 		<div date-reactid = '1'>
