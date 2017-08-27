@@ -1,3 +1,4 @@
+
 <html class="page3html">
   <body class="page3body">
 
@@ -43,12 +44,23 @@
 			<div class="img"><img src="<%=@train[2].photos%>"></div>
       <div class="img"><img src="<%=@train[1].photos%>"></div>
       <div class="img" style="position:absolute;"><img src="<%=@train[3].photos%>">
-        <i class="fa fa-2x fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 10px;right: 9px;"></i>
+        <% @product = @products[0] %>
+        <%= form_for @order_item do |f| %>
+          <div class="input-group input-xs col-xs-3" style="position:absolute;bottom:8px;right:62px;">
+            <%= f.hidden_field :product_id, value: @product.id %>
+            <%= f.number_field :quantity, value: 0, class:"form-control input-sm", style:"width:45px;", min: 0 %>
+            <div class="input-group-btn">
+              <%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
+            </div>
+          </div>
+      <% end %>
+        <!-- <i class="fa fa-2x fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 10px;right: 9px;"></i> -->
       </div>
   	  <div class="price-stamp">$15</div>
-
     	</div>
     </section>
+
+
 
 
     <!-- Nutrition -->
@@ -59,11 +71,22 @@
       <div class="img"><img src="<%=@nutrition[0].photos%>"></div>
       <div class="img"><img src="<%=@nutrition[1].photos%>"></div>
       <div class="img" style="position:absolute;"><img src="<%=@nutrition[3].photos%>">
-        <i class="fa fa-2x fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 10px;right: 9px;"></i>
+        <% @product1 = @products[1] %>
+        <%= form_for @order_item do |f| %>
+          <div class="input-group input-xs col-xs-3" style="position:absolute;bottom:8px;right:62px;">
+            <%= f.hidden_field :product_id, value: @product1.id %>
+            <%= f.number_field :quantity, value: 0, class:"form-control input-sm", style:"width:45px;", min: 0 %>
+            <div class="input-group-btn">
+              <%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
+            </div>
+          </div>
+      <% end %>
+        <!-- <i class="fa fa-2x fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 10px;right: 9px;"></i> -->
       </div>
       <div class="price-stamp">$20</div>
       </div>
     </section>
+
 
     <!-- Visit -->
     <div class="gallery-places" style="width:1175px;margin-left:auto;margin-right:auto;">
