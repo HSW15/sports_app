@@ -1,15 +1,25 @@
 <h1>Amazing Reviews</h1>
-<h2>Online Retail Testimonial Style</h2>
+<h2>See what our customer said</h2>
+
 <div class=amazing-reviews>
+  <% @comments.each do |comment| %>
   <blockquote>
     <header>
-      <%= @comments.each do |comment| %>
-      <strong>Ullamco laboris!</strong>
-      <span>, <%= comment.updated_at %></span>
+      <span><%= comment.updated_at %></span>
       <span>By <em><%=current_user.name %></em></span>
-      <span>Verified Purchase</span>
     </header>
     <p><%= comment.description %></p>
+    <% if current_user == current_user %>
+    <%= button_to 'Delete',
+           method: :delete,
+           data: { confirm: 'Are you sure?' }  %>
+           <% end %>
   </blockquote>
   <% end %>
 </div>
+
+
+	<h1>Leave a comment</h1>
+
+
+<%= render 'form' %>
