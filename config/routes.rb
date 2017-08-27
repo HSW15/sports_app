@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/signout', to: 'sessions#destroy', as: 'signout'
   get '/feedback', to: 'home#event', as: 'feedback'
   get '/events_show', to: 'home#eventpageprofile', as: 'events_show'
+  get '/addon', to: 'home#addon', as: 'addon'
   resources :sessions, only: [:create, :destroy, :new]
   resource :home, only: [:show]
   resources :users, only: [:show]
@@ -16,5 +17,6 @@ Rails.application.routes.draw do
 
   get "reservations/:id/payment", to: "reservations#payment", as: "go_payment"
   post "reservations/:id/checkout", to: "reservations#checkout", as: "go_checkout"
+
 
 end
