@@ -6,9 +6,10 @@ class ReservationsController < ApplicationController
   end
 
   def new
-    @user = current_user
+    @user = User.first
     @listing = Listing.find(@listing.id)
-    @reservation = current_user.reservations.new
+    @reservation = @user.reservations.new
+
   end
 
   def create
