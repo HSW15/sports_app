@@ -59,6 +59,30 @@ ActiveRecord::Base.transaction do
 
     Listing.create(name: "Be Lohas Healthy Cuisine", location:"Jalan Batu Ambar, Taman Kok Lian, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia", description:"Find out about the role fats play in a healthy diet, including saturated fats and unsaturated fats.", price: 0, max_guests: 1, purpose: "nutrition", photos: "https://s3.amazonaws.com/media.a-q-c-a.com/sitebuilder/new/249/healthy-foods-for-kidneys.jpg" )
 
+    # 10 listing place for purpose visit
+    Listing.create(name: "Genting Highland", photos: "http://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/attractions/genting/pagePropertiesImage/genting-highland.jpg", purpose: "visit" )
+
+    Listing.create(name: "Batu Caves", photos: "https://i.ytimg.com/vi/zxHy9MM_bYQ/maxresdefault.jpg", purpose: "visit" )
+
+    Listing.create(name: "Penang", photos: "http://everynation.org.my/hp_wordpress/wp-content/uploads/2015/08/Penang-Header.jpg", purpose: "visit" )
+
+    Listing.create(name: "Melaka", photos: "http://travelguide.easybook.com/wp-content/uploads/2015/06/where-to-stay-malacca.jpg", purpose: "visit" )
+
+    Listing.create(name: "Gunung Kinabalu", photos: "https://www.vebma.com/media/uploads/article/gunung-kinabalu.jpg", purpose: "visit" )
+
+    Listing.create(name: "Kuala Lumpur Convention Center", photos: "http://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/klshopping/suria-mall-klcc/pagePropertiesImage/suria-klcc.jpg", purpose: "visit" )
+
+    Listing.create(name: "Sunway Lagoon", photos: "http://icosmosenterprise.com/wp-content/uploads/2016/07/Sunway-Lagoon.png", purpose: "visit" )
+
+    Listing.create(name: "Redang Island", photos: "http://sonarz.com/wp-content/uploads/2015/11/Redang-Island-Review.jpg", purpose: "visit" )
+
+    Listing.create(name: "Ipoh", photos: "https://lonelyplanetimages.imgix.net/a/g/hi/t/9fc39c1710eb3109b74a3e839b2ed351-ipoh.jpg?sharp=10&vib=20&w=1200", purpose: "visit" )
+
+    Listing.create(name: "Cameron highland", photos: "http://static.asiawebdirect.com/m/kl/portals/kuala-lumpur-ws/homepage/cameron-highlands/pagePropertiesImage/cameron-highlands.jpg.jpg", purpose: "visit" )
+
+
+
+
 
 
 
