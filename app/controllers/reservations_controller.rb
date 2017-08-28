@@ -35,6 +35,7 @@ class ReservationsController < ApplicationController
 
   def payment
     @client_token = Braintree::ClientToken.generate
+    render "products/index"
   end
 
   def checkout

@@ -10,11 +10,8 @@
   <p>Your shopping cart is empty.</p>
 <% end %> -->
 
-<html>
-<head>
-  <meta charset="utf-8">
- </head>
-<body>
+
+<body class="cartlist">
   <% @reservations = current_user.reservations.where(payment:false) %>
   <% if @reservations.any? %>
 
@@ -68,9 +65,21 @@
 
 </body>
 <style>
-body {
-
-}
+body{font: 13px/20px 'Lucida Grande', Verdana, sans-serif;
+color: #404040;
+// background: #eee;
+padding: 0;
+  margin: 0;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.13),
+      rgba(0, 0, 0, 0.13)
+    ),
+  url("http://images.huffingtonpost.com/2017-01-01-1483271051-5191660-AirbnbEtiquetteTIPS0316.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  background-size: cover;}
 #footer1 {
   display:none;
 }
