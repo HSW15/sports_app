@@ -1,0 +1,187 @@
+<html class="page3html">
+  <body class="page3body">
+
+    <!-- Notifications  -->
+    <div class ="load_modal">
+      <div class="notifications" style="margin-top:4.25px;">
+
+  		  <div class="notify gr" style="background: -webkit-linear-gradient(top, rgba(254,255,255,1) 0%,rgba(221,241,249,1) 35%,rgba(160,216,239,1) 100%);">
+
+  		    <%= image_tag ("admin4.jpg"), class: 'img-circle', style:"border-color:gray;border-width:2.5px;border-style:solid;margin-top:8.5px;margin-left:10px;"%>
+  		    <div class="info" style="margin-top:-27px;margin-left:-4px;">
+  		     <div style="margin-bottom:-2px;"> <span style="font-size:13px;">As simple as 1, 2, 3!</span></div>
+  					<b style="font-size:12px;margin-top:-2px;">Step 3: </b><span style="font-size:13px;">Choose your add-ons</span>
+  		      <div><span style="font-weight:normal;font-size:11px;color:gray;float:none;margin-top:0px;"><%=Time.now.strftime("%I:%M%p")%></span>
+  		    </div>
+  			</div>
+
+  		  </div>
+
+  		</div>
+  	</div>
+    <script>
+    console.log("hi");
+    $('body').click(function(e){ console.log(e.target) })
+    $('.load_modal').click( function() {
+    	debugger;
+
+      $(this).fadeOut();
+    });
+    </script>
+
+
+
+
+
+
+
+    <!-- Train -->
+    <section class="gallery" style="margin-top:-170px;">
+  		<div class="prices" style="margin-left:auto;margin-right:auto;">
+      <h3 style="color:white;font-size:21px;margin-bottom:-14px;text-align:center;">Training Pass</h3>
+      <% @train = Listing.where(purpose:"train").order("name").page(params[:page]).per(4) %>
+			<div class="img"><img src="<%=@train[2].photos%>"></div>
+      <div class="img"><img src="<%=@train[1].photos%>"></div>
+      <div class="img" style="position:absolute;"><img src="<%=@train[3].photos%>">
+        <i class="fa fa-2x fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 10px;right: 9px;"></i>
+      </div>
+  	  <div class="price-stamp">$15</div>
+
+    	</div>
+    </section>
+
+
+    <!-- Nutrition -->
+    <section class="gallery" style="margin-top:-170px;">
+      <div class="prices" style="margin-left:auto;margin-right:auto;">
+      <h3 style="color:white;font-size:21px;margin-bottom:-14px;text-align:center;">Nutrition Pass</h3>
+      <% @nutrition = Listing.where(purpose:"nutrition").order("name").page(params[:page]).per(4) %>
+      <div class="img"><img src="<%=@nutrition[0].photos%>"></div>
+      <div class="img"><img src="<%=@nutrition[1].photos%>"></div>
+      <div class="img" style="position:absolute;"><img src="<%=@nutrition[3].photos%>">
+        <i class="fa fa-2x fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 10px;right: 9px;"></i>
+      </div>
+      <div class="price-stamp">$20</div>
+      </div>
+    </section>
+
+    <!-- Visit -->
+    <div class="gallery-places" style="width:1175px;margin-left:auto;margin-right:auto;">
+
+		<h3 style="color:white;font-size:21px;margin-bottom:16px;text-align:center;">Explore With Us</h3>
+
+		<ul class="places">
+
+			<li class="img-large">
+				<img src="https://a0.muscache.com/airbnb/static/destinations/o-Paris_480x320.jpg">
+				<h4 class="place-names">Paris</h4>
+			</li>
+
+
+			<li class="img-short">
+				<img src="https://a0.muscache.com/airbnb/static/destinations/o-Rome_Piazza017_480x320.jpg">
+				<h4 class="place-names">Rome</h4>
+			</li>
+
+
+			<li class="img-short">
+				<img src="https://a0.muscache.com/airbnb/static/destinations/o-Los_Angeles_480x320.jpg">
+				<h4 class="place-names">Los Angeles</h4>
+			</li>
+
+
+			<li class="img-short">
+				<img src="https://a0.muscache.com/airbnb/static/destinations/o-Lisbon_480x320.jpg">
+				<h4 class="place-names">Lisbon</h4>
+			</li>
+
+
+			<li class="img-short">
+				<img src="https://a0.muscache.com/airbnb/static/destinations/o-Kyoto_480x320.jpg">
+				<h4 class="place-names">Tokyo</h4>
+			</li>
+
+
+			<li class="img-short">
+				<img src="https://a0.muscache.com/airbnb/static/destinations/o-London_480x320.jpg">
+				<h4 class="place-names">London</h4>
+			</li>
+
+
+			<li class="img-large">
+				<img src="https://a0.muscache.com/airbnb/static/destinations/o-New_York_480x320.jpg">
+				<h4 class="place-names">New York</h4>
+			</li>
+
+
+			<li class="img-short">
+				<img src="https://a0.muscache.com/airbnb/static/destinations/o-Barcelona_480x320.jpg">
+				<h4 class="place-names">Barcelona</h4>
+			</li>
+
+
+			<li class="img-short">
+				<img src="https://a0.muscache.com/airbnb/static/destinations/o-Amsterdam_480x320.jpg">
+				<h4 class="place-names">Amsterdam</h4>
+			</li>
+
+
+			<li class="img-short">
+				<img src="https://a0.muscache.com/airbnb/static/destinations/o-Berlin_480x320.jpg">
+				<h4 class="place-names">Berlin</h4>
+			</li>
+
+		</ul>
+
+	</div>
+
+	<hr>
+
+  <div class="guidebooks" style="width:940px;margin-left:auto;margin-right:auto;">
+
+			<h3 style="color:white;font-size:21px;margin-bottom:-50px;text-align:center;">Free Sport-Travel Guide</h3>
+
+			<div class="img-box">
+				<img class="img-big" src="https://a2.muscache.com/ac/pictures/2a4e63c3-c981-4cbc-9c37-80a6ab3a9d24.jpg?interpolation=lanczos-none&size=x_medium&output-format=jpg&output-quality=70">
+				<img class="img-small" src="https://a0.muscache.com/airbnb/guidebook/v1_san_francisco_food_scene_carousel@2x.jpg">
+				<img class="img-small" src="https://a1.muscache.com/airbnb/guidebook/v1_san_francisco_drinks_nightlife_carousel@2x.jpg">
+
+				<h4 style="color:white;"><spam>San Francisco</spam></h4>
+				<p style="color:white;margin-top:3px;">6,237 places<p>
+			</div>
+
+
+			<div class="img-box">
+				<img class="img-big" src="https://a2.muscache.com/ac/pictures/cf3b9363-34e4-4532-b051-6a7663410854.jpg?interpolation=lanczos-none&size=x_medium&output-format=jpg&output-quality=70">
+				<img class="img-small" src="https://a1.muscache.com/airbnb/guidebook/v1_new_york_food_scene_carousel@2x.jpg">
+				<img class="img-small" src="https://a0.muscache.com/airbnb/guidebook/v1_new_york_drinks_nightlife_carousel@2x.jpg">
+
+				<h4 style="color:white;">New York</h4>
+				<p style="color:white;margin-top:3px;">23,725 places</p>
+			</div>
+
+
+			<div class="img-box">
+				<img class="img-big" src="https://a2.muscache.com/ac/pictures/b62aa572-cf0b-4e4a-b886-a039a0250cf3.jpg?interpolation=lanczos-none&size=x_medium&output-format=jpg&output-quality=70">
+				<img class="img-small" src="https://a1.muscache.com/airbnb/guidebook/v1_london_food_scene_carousel@2x.jpg">
+				<img class="img-small" src="https://a2.muscache.com/airbnb/guidebook/v1_london_drinks_nightlife_carousel@2x.jpg">
+
+				<h4 style="color:white;"> London</h4>
+				<p style="color:white;margin-top:3px;">18,795 places</p>
+			</div>
+
+
+		</div>
+
+
+
+  </body>
+</html>
+
+<style>
+  #footer1
+  {
+    display: none;
+  }
+
+</style>

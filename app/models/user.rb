@@ -1,7 +1,11 @@
 class User < ApplicationRecord
   # mount_uploader :avatar, AvatarUploader
   has_many :reservations
+
   has_many :comments, dependent: :destroy
+
+  has_many :orders 
+
 
   def self.from_omniauth(auth)
 
@@ -13,6 +17,7 @@ class User < ApplicationRecord
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.avatars = auth.info.image
       user.save!
-    end
+  end
+
   end
 end

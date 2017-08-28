@@ -1,10 +1,27 @@
 <style>
-  /*basic reset*/
-  * {margin: 0; padding: 0;}
+#footer1 {
+	display:none;
+}
 </style>
 
 <html class="sessions_html">
-  <body class="sessions_new_background">
+<body class="youtube_video sessions_new_background">
+<div class="video-background">
+    <div class="video-foreground">
+      <iframe src="https://www.youtube.com/embed/-lGB5KERjKo?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+<!-- </body> -->
+<!--
+<style>
+  /*basic reset*/
+  * {margin: 0; padding: 0;}
+</style> -->
+
+<!-- <html class="sessions_html">
+  <body class="sessions_new_background"> -->
 
     <!-- multistep form -->
     <form id="msform">
@@ -16,8 +33,31 @@
       </ul>
       <!-- fieldsets -->
       <fieldset>
-        <h2 class="fs-title">Welcome Back!</h2>
-        <h3 class="fs-subtitle">Always stay close to the action</h3>
+				<h2 class="fs-title">Where are you travelling from?</h2>
+        <h3 class="fs-subtitle">We need to know a few things before customizing your trip</h3>
+        <input type="text" name="zipcode" placeholder="Country" />
+        <input type="text" name="zipcode" placeholder="Zipcode" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+      </fieldset>
+      <fieldset>
+				<h2 class="fs-title">Which best describes you?</h2>
+				<h3 class="fs-subtitle">We're almost there</h3>
+				<!-- <input type="text" name="fullname" placeholder="Athlete/ Fan/ Delegation/ Organizer ..." /> -->
+				<!-- <h3 class="fs-subtitle">According to our calculations, painting your house will cost:</h3> -->
+				<div class="form-group">
+				  <select class="form-control" id="sel1">
+				    <option>Athlete</option>
+				    <option>Delegation</option>
+				    <option>Fan</option>
+				    <option>Organizer</option>
+				  </select>
+				</div>
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+      </fieldset>
+      <fieldset>
+				<h2 class="fs-title">Ready to plan the trip of your life?</h2>
+        <h3 class="fs-subtitle">We are too. Let's go!</h3>
         <div class="fb">
           <button class="loginBtn loginBtn--facebook" style="margin-left:auto;margin-right:auto;">
             <%= link_to "Login with Facebook", "/auth/facebook", id: "sign_in", style:"color:white;text-decoration:none;margin-left:10px;" %>
@@ -41,27 +81,13 @@
         <input type="text" name="fullname" placeholder="Full Name" />
         <input type="text" name="phone" placeholder="Phone" />
         <input type="button" name="previous" class="previous action-button" value="Previous" /> -->
-        <input type="button" name="next" class="next action-button" value="Next" />
-      </fieldset>
-      <fieldset>
-        <h2 class="fs-title">Where are you located?</h2>
-        <h3 class="fs-subtitle">We need to know a few things before customizing your trip</h3>
-        <input type="text" name="zipcode" placeholder="Country" />
-        <input type="text" name="zipcode" placeholder="Zipcode" />
-        <input type="button" name="previous" class="previous action-button" value="Previous" />
-        <input type="button" name="next" class="next action-button" value="Next" />
-      </fieldset>
-      <fieldset>
-        <h2 class="fs-title">What kind of traveler are you?</h2>
-        <h3 class="fs-subtitle">We're almost there</h3>
-        <input type="text" name="fullname" placeholder="Athlete, fan, organizer ..." />
-        <!-- <h3 class="fs-subtitle">According to our calculations, painting your house will cost:</h3> -->
-        <input type="button" name="previous" class="previous action-button" value="Previous" />
+
+        <!-- <input type="button" name="previous" class="previous action-button" value="Previous" /> -->
 
       </fieldset>
     </form>
 
-    <%= link_to "Click for listings#show(index)", listings_path %>
+    <!-- <%= link_to "Click for listings#show(index)", listings_path %> -->
 
   </body>
 </html>

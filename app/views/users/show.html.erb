@@ -10,7 +10,7 @@
 
     <!-- </div> -->
 
-<br>
+
 
 
 <div class="container_body">
@@ -38,7 +38,7 @@
         <ul class="row2tab clearfix">
           <li><i class="fa fa-check"></i> <%=link_to "My Reservations", user_path, :style=>"text-decoration:none;"%> </li>
           <li><i class="fa fa-list-alt"></i> <%=link_to "Travel Guide", listings_path, :style=>"text-decoration:none;"%> </li>
-          <li><i class="fa fa-bar-chart"></i>Events</li>
+          <li><i class="fa fa-bar-chart"></i><%=link_to "Events", events_show_path, :style=>"text-decoration:none;"%></li>
           <li><i class="fa fa-dashboard "></i> Manage Profile </li>
         </ul>
       </div>
@@ -46,7 +46,7 @@
   </div>
 </div>
 
-<br>
+<br><br>
 <% if current_user.reservations.present? %>
 <section class="gallery" style="margin-top:-170px;">
 
@@ -60,14 +60,26 @@
 
 			<div class="img"><img src="https://a2.muscache.com/im/pictures/6152848/b04eddeb_original.jpg?aki_policy=x_medium"></div>
       <div class="img"><img src="https://a2.muscache.com/im/pictures/34792065/bae84a3f_original.jpg?aki_policy=x_medium"></div>
-      <div class="img"><img src="https://a2.muscache.com/im/pictures/1faf9a4c-f839-44da-bd37-65ddc928379e.jpg?aki_policy=x_medium"></div>
+      <div class="img" style="position:absolute;"><img src="https://a2.muscache.com/im/pictures/1faf9a4c-f839-44da-bd37-65ddc928379e.jpg?aki_policy=x_medium">
+        <%=link_to (listing_reservation_path(x.id)) do %>
+          <i class="fa fa-2x fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 10px;right: 9px;"></i>
+        <% end %>
+      </div>
+
 				<div class="price-stamp">$<%=x.total%></div>
-				<div class="description" style="text-align:center;">
-					<h4><%= link_to "#{@listing.name}", listing_path(@listing.id), :style=>"text-decoration:none;"%></h4>
+
+				<div class="description" style="text-align:center;color:white;">
+					<h4><%= link_to "#{@listing.name}", listing_path(@listing.id), :style=>"text-decoration:none;color:white;"%></h4>
           <h5> <%= x.start_date.strftime("%B %d, %Y") %> to <%= x.end_date.strftime("%B %d, %Y") %> </h5>
+            <% if x.payment != true %>
+            <%= button_to "Make Payment", go_payment_path(x.id),  :style=>"text-decoration:none;width:110px;", class:"btn-primary btn btn-sm", method: :get%>
+            <% else %>
+            <button class="btn-warning btn btn-sm" style="width:110px;"> Paid </button>
+            <% end %>
 				</div>
 
         <% end %>
+
 			</div>
 
 		</div>
@@ -75,6 +87,7 @@
 <% else %>
 <h4> You have no reservations yet. Are you interested in any of these sporting events? </h4>
 <% end %>
+
 
 
   </body>

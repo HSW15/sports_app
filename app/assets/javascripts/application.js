@@ -17,6 +17,7 @@
 
 
 
+
 $(document).ready(function(){
 	function box1() {
 		$($(document.getElementsByClassName("bg-loaded1"))[0]).attr('class',"bg-loaded slide-out");
@@ -29,10 +30,10 @@ $(document).ready(function(){
 	};
 	function box4() {
 		$($(document.getElementsByClassName("bg-loaded4"))[0]).attr('class',"bg-loaded slide-out");
-	};	
+	};
 
 	$(".bg-loaded1").click(function(event){
-		
+
 		event.preventDefault();
 		$($(event.currentTarget).parent().next().children()[0]).attr('class',"selected")
 		$($(document.getElementsByClassName("cd-nav-trigger"))[0]).attr('class',"cd-nav-trigger cd-text-replace project-open");
@@ -61,7 +62,7 @@ $(document).ready(function(){
 		setTimeout(box2, 1000);
 		setTimeout(box3, 1500);
 		setTimeout(box4, 2000);
-		
+
 	});
 	$(".bg-loaded4").click(function(event){
 		event.preventDefault();

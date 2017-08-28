@@ -5,6 +5,15 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <script src=" http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -71,7 +80,7 @@
         <li class="nav__item">
         <% if session[:user_id].present?%>
           <div style="margin-top:-0.515px;">
-          <%= link_to "Log Out", signout_path, method: :delete, :style=>"text-decoration:none;color:white;" %>
+          <%= link_to "Log Out", signout_path, method: :get, :style=>"text-decoration:none;color:white;" %>
           </div>
         <% else -%>
           <div style="margin-top:-0.5156127px; padding:0 0 0 0px;">
@@ -83,6 +92,7 @@
           <%= image_tag (current_user.avatars), class: 'img-circle', style:"margin-top:-9px;margin-left:-40px;border-radius:100%;height:40%"  %>
         </li>
         <% end %>
+      
       </li>
       </div>
     </ul>

@@ -35,7 +35,9 @@ gem 'rest-client'
 #14. Datepicker gems
 gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
-
+# 15. Redis
+gem 'redis'
+gem 'hiredis'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'

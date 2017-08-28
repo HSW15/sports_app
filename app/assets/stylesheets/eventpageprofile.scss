@@ -25,7 +25,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -42,8 +42,21 @@ a {
   color: #a8ae7e;
   text-decoration: none;
 }
-
-/* -------------------------------- 
+body {
+padding: 0;
+margin: 0;
+background:
+	linear-gradient(
+		rgba(0, 0, 0, 0.13),
+		rgba(0, 0, 0, 0.13)
+	),
+asset_url("profile_background3.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+background-size: cover;
+font-family: 'Open Sans', sans-serif;}
+/* --------------------------------
 
 Patterns - reusable parts of our design
 
@@ -58,16 +71,18 @@ Patterns - reusable parts of our design
 .nav_button_event_page{
   display:none;
 }
-/* -------------------------------- 
+/* --------------------------------
 
 
-xnugget info 
+xnugget info
 
 -------------------------------- */
 .cd-nugget-info a {
   position: fixed;
+	// float:right;
   left: 5%;
-  bottom: 40px;
+  // bottom: 40px;
+	top: 40px;
   display: block;
   z-index: 50;
   width: 190px;
@@ -75,6 +90,7 @@ xnugget info
   line-height: 54px;
   font-size: 14px;
   color: #ffffff;
+	// background-color: white;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 50em;
   text-align: center;
@@ -96,9 +112,9 @@ xnugget info
   fill: #ffffff;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xcarbonads 
+xcarbonads
 
 -------------------------------- */
 #carbonads-container,
@@ -266,7 +282,7 @@ xcarbonads
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Menu trigger
 
@@ -413,7 +429,7 @@ Menu trigger
   }
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
 Projects
 
@@ -625,28 +641,42 @@ Projects
   height: 100vh;
 }
 
+
 .cd-projects-previews a,
 .cd-projects .preview-image {
   /* set a background image for each project */
-  background: #5b927d url(home-background6.jpg) no-repeat center center;
+  background: linear-gradient(
+			rgba(0, 0, 0, 0.01),
+			rgba(0, 0, 0, 0.01)
+		),#5b927d url(f1-3.jpg) no-repeat center center;
   background-size: cover;
+
 }
 
 .cd-projects-previews li:nth-of-type(2) a,
 .cd-projects > li:nth-of-type(2) .preview-image {
-  background: #a8ae7e url(home-background7.jpg) no-repeat center center;
+  background:	 linear-gradient(
+			rgba(0, 0, 0, 0.01),
+			rgba(0, 0, 0, 0.01)
+		), #a8ae7e url(sea2.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .cd-projects-previews li:nth-of-type(3) a,
 .cd-projects > li:nth-of-type(3) .preview-image {
-  background: #e7d5a4 url(home-background8.jpg) no-repeat center center;
+  background: linear-gradient(
+			rgba(0, 0, 0, 0.01),
+			rgba(0, 0, 0, 0.01)
+		),#e7d5a4 url(lcw1.jpg) no-repeat center center;
   background-size: cover;
 }
 
 .cd-projects-previews li:nth-of-type(4) a,
 .cd-projects > li:nth-of-type(4) .preview-image {
-  background: #835531 url(home-background5.jpg) no-repeat center center;
+  background: linear-gradient(
+			rgba(0, 0, 0, 0.01),
+			rgba(0, 0, 0, 0.01)
+		),#835531 url(esport_1.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -826,7 +856,7 @@ li.selected .cd-project-title,
 }
 
 .cd-project-info {
-  display: none;
+  // display: none;
   padding: 4em 0;
   background-color: #ffffff;
   color: #7d7c7b;
@@ -938,7 +968,7 @@ li.selected .cd-project-title,
     transform: translateX(-50%) scale(1);
   }
 }
-/* -------------------------------- 
+/* --------------------------------
 
  Navigation
 
@@ -1019,4 +1049,75 @@ li.selected .cd-project-title,
   .cd-primary-nav a {
     font-size: 4rem;
   }
+}
+
+
+// __________________________________________
+.tickets {
+// 	* {
+//   box-sizing: border-box;
+//   text-rendering: optimizeLegibility;
+//   -webkit-font-smoothing: antialiased;
+// }
+//
+// body,
+// html {
+//   width: 100%;
+//   height: 100%;
+//   background: #222;
+// }
+
+.btn {
+	font-family: 'Oswald', sans-serif;
+	display: block;
+	height: 40px;
+	padding: 5px 30px;
+	text-align: center;
+	text-decoration: none;
+	width: 190px;
+	font-size: 13px;
+	line-height: 2em;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: all .3s ease-in-out;
+	position: absolute;
+	// bottom: 50%;
+	// top: 50%;
+	left: 50%;
+	transform: translate3D(-50%, -50%, 0);
+  color: #fff;
+  border: 2px solid lightgrey;
+
+	&:before,
+	&:after {
+		width: 0%;
+		height: 2px;
+		position: absolute;
+		background: #e5c100;
+		transition: width .4s ease-in-out;
+		content: " ";
+	}
+
+	&:before {
+		left: 0;
+		top: -2px;
+	}
+
+	&:after {
+		bottom: -2px;
+		right: 0;
+	}
+
+	&:hover {
+		padding: 5px 25px 5px 35px;
+		border-color: #e5c100;
+    color: lighten(#e5c100, 50%);
+
+		&:before,
+		&:after {
+			width: 100%;
+		}
+	}
+}
 }

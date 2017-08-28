@@ -1,11 +1,30 @@
 /*Listing#show*/
 .listing_show_body {
 
-photos_jx8qn9-o_O-withModal_13xlah4 {
+background-color:ghostwhite;
+
+  background:
+    linear-gradient(
+      rgba(192,192,192,0.5),
+      rgba(192,192,192,0.5)
+    ),
+
+  asset_url("kl-background.jpg") no-repeat center center fixed;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+
+
+
+.photos_jx8qn9-o_O-withModal_13xlah4 {
     position: relative ;
     width: 100% ;
-    background-color: #f5f5f5 ;
+    background-color: none ;
     cursor: pointer ;
+    height:500px;
 }
 .hide {
     display: none ;
@@ -48,20 +67,30 @@ img {
     height: 100%;
 }
 .coverImage_75zala {
+border-radius: 30px;
     background-repeat: no-repeat ;
     background-size: cover ;
     background-position: 50% 50% ;
         background-position-x: 50%;
         background-position-y: 50%;
-    height: 320px ;
+    height: 500px ;
+    width: 90%;
+    margin: auto;
+    padding: 15px 15px 0;
+  background-color: transparent;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  -moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+  -webkit-box-shadow: 0 3px 99px rgba(34, 25, 25, 0.9);
 }
 .viewPhotos_bwd0sy {
     bottom: 20px ;
     left: 20px ;
 position: absolute ;
 right: 20px ;
+margin-left: 45%;
 }
-.btn {
+.btn123 {
+    z-index:5;
     border-color: #c4c4c4;
         border-top-color: rgb(196, 196, 196);
         border-right-color: rgb(196, 196, 196);
@@ -132,15 +161,15 @@ margin-right: auto !important;
 font-weight: 300 ;
 }
 .container_p37oqd-o_O-container_staticWidth_mfbig2 {
-    max-width: 1080px ;
+    
 padding-right: 24px ;
 padding-left: 24px ;
-margin-left: auto ;
-margin-right: auto ;
-width: auto ;
+margin-left: 10% ;
+margin-right: 1% ;
+width: 100% ;
 }
 .row_2h22gn {
-    margin-left: -8px ;
+    
     margin-right: -8px ;
 }
 .row_2h22gn::before {
@@ -148,7 +177,7 @@ width: auto ;
     display: table ;
 }
 .column_1rnz84d-o_O-column-lg-8_1gc3mvd {
-    width: 66.66666666666666% ;
+    
     float: left ;
 padding-left: 8px ;
 padding-right: 8px ;
@@ -451,7 +480,7 @@ background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffffff) ;
     margin-right: -12px;
 }
 .room__dls .section-container {
-    margin-bottom: 24px ;
+    margin-bottom: 4px ;
     margin-top: 24px ;
 }
 .room__dls .summary-container {
@@ -604,6 +633,7 @@ display:table;
     -o-background-size: cover;
   background-size: cover;
   font-family: 'Open Sans', sans-serif;
+
 
 
   // body > div {
