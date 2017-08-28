@@ -1,4 +1,56 @@
 
+<div class="add_to_cart">
+            <!-- https://codyhouse.co/gem/add-to-cart-interaction/ -->
+            <main>
+              <div class="tickets"><a href="#0" class="cd-add-to-cart btn" data-price="50.99" style="margin-top: 46px;">Add To Cart</a></div>
+              <div class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;">Continue</a></div>
+              <!-- <div class="tickets"><div class="btn">Purchase Tickets</div></div> -->
+            </main>
+
+
+            <!-- <main>
+              <a href="#0">Continue</a>
+            </main> -->
+
+            <div class="cd-cart-container empty">
+              <a href="#0" class="cd-cart-trigger" style="text-decoration:none;">
+                Cart
+                <ul class="count"> <!-- cart items count -->
+                  <li>0</li>
+                  <li>0</li>
+                </ul> <!-- .count -->
+              </a>
+
+              <div class="cd-cart">
+                <div class="wrapper">
+                  <header>
+                    <h2>Cart</h2>
+                    <span class="undo">Item removed. <a href="#0" style="text-decoration:none;">Undo</a></span>
+                  </header>
+
+                  <div class="body">
+                    <ul>
+                      <!-- products added to the cart will be inserted here using JavaScript -->
+                    </ul>
+                  </div>
+
+                  <footer>
+
+                    <a href="#0" class="checkout btn"><em>Current Total: $<span>0</span></em></a>
+                  </footer>
+                </div>
+              </div> <!-- .cd-cart -->
+            </div> <!-- cd-cart-container -->
+  <!-- <%=link_to "Continue", listings_path, style:"text-decoration:none;"%> -->
+
+</div>
+</div> <!-- .cd-project-info -->
+</li>
+
+
+
+
+
 <!-- <% @products.each do |product| %> -->
  <!-- <p><%= product.name %> | <%= number_to_currency product.price %> -->
  <% @product = @products[0] %>
