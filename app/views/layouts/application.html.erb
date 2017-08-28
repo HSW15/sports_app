@@ -74,7 +74,7 @@
 
           <% if session[:user_id].present?%>
 
-            <li class="nav__item"><%= link_to "Shopping Cart", carts_show_path, style:"color:white;text-decoration:none;"%><i class="fa fa-shopping-cart" aria-hidden="true"style="margin-left:8px;margin-right:3px;">
+            <li class="nav__item"><%= link_to "Shopping Cart", cart_path, style:"color:white;text-decoration:none;"%><i class="fa fa-shopping-cart" aria-hidden="true"style="margin-left:8px;margin-right:3px;">
               <span class="badge">
               <%= number_to_currency (current_order.total_price)%></span></i></li>
           <% else -%>
