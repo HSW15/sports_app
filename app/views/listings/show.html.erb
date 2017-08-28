@@ -1,27 +1,31 @@
 <body class="listing_show_body" style="background-color: ghostwhite;">
 
-	<!-- <h1> <%= @listing.name %> </h1> -->
 		<div class="body">
-			<div class="listing-picture">
+			<div class="listing-picture" style="height:25vw;">
 				<div data-reactid="97"><!-- react-empty: 98 --><!-- react-empty: 99 -->
 					<div data-reactid="100">
-					  <div class="photos_jx8qn9-o_O-withModal_13xlah4" data-reactid="101">
+					  <div class="photos_jx8qn9-o_O-withModal_13xlah4" style="height:25vw;" data-reactid="101">
 					    <span data-reactid="102">
 					      <img alt="" class="hide" src="https://a0.muscache.com/im/pictures/22903552/b41736ff_original.jpg?aki_policy=large" srcset="https://a0.muscache.com/im/pictures/22903552/b41736ff_original.jpg?aki_policy=large 639w,https://a0.muscache.com/im/pictures/22903552/b41736ff_original.jpg?aki_policy=xx_large 1440w" data-reactid="103" width="0">
 					      <div class="hide" data-reactid="104">
 					        <img class="carousel-image img-responsive-height" src="https://a0.muscache.com/im/pictures/22903548/206fd625_original.jpg?aki_policy=x_large" alt="Grand deck autour de la piscine avec transats, espace repas ombragé pour 8 personnes, barbecue et plancha." data-reactid="105">
 					        <img class="carousel-image img-responsive-height" src="https://a0.muscache.com/im/pictures/22903733/a5bf075a_original.jpg?aki_policy=x_large" alt="Terrasse plein sud sans aucun vis à vis.Piscine 7*4 équipée d'une alarme et d'une bâche thermique." data-reactid="106">
 					      </div>
+					      <div class="btn124" style="height: 15%; width: 45%; position: absolute; padding-top:5%;text-shadow: 2px 2px 0px #000; font-size:2.2vw;" data-reactid="114a">
+					      	<div style=" width:92%;background-color:whitesmoke;;opacity:1;">
+					      		<p data-reactid="116a">"Travel like a Champion."</p>
+					      	</div>
+					      </div>
 					      <span data-reactid="107"><!-- react-empty: 2398 -->
-					        <div data-reactid="112">
-					          <div class="coverImage_75zala" style="background-image:url(https://a0.muscache.com/im/pictures/22903552/b41736ff_original.jpg?aki_policy=xx_large);" aria-hidden="true" data-reactid="113"></div>
+					        <div data-reactid="112" style="height:25vw"">
+					          <div class="coverImage_75zala" style="background-image:url(<%= @listing.photos %>);" aria-hidden="true" data-reactid="113">
+				
+					          </div>
+					          
 					        </div>
 					      </span>
-					      <div class="viewPhotos_bwd0sy" data-reactid="114">
-					        <button class="btn123" data-reactid="115">
-					          <span data-reactid="116">View Photos</span>
-					        </button>
-					      </div>
+					      
+					      
 					    </span>
 					  </div>
 					</div>
@@ -805,6 +809,10 @@
 		<%= link_to "Reserve this listing", new_listing_reservation_path(@listing.id) %>
 	</div>
 
+
+<%= link_to "Reserve this listing", new_listing_reservation_path(@listing.id) %>
+<%= link_to "Reviews", listing_comments_path(@listing) %>
+</body>
 
 
 <style>

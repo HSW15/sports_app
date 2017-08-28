@@ -73,7 +73,7 @@ border-radius: 30px;
     background-position: 50% 50% ;
         background-position-x: 50%;
         background-position-y: 50%;
-    height: 500px ;
+    height: 100% ;
     width: 90%;
     margin: auto;
     padding: 15px 15px 0;
@@ -89,6 +89,35 @@ position: absolute ;
 right: 20px ;
 margin-left: 45%;
 }
+.btn124 {
+    font-family: 'Trocchi', serif;
+    z-index:5;
+   
+    background: width;
+        background-color: transparent;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-position-x: 0%;
+        background-position-y: 0%;
+        background-size: auto auto;
+    color: firebrick;
+
+    padding-left: 10%;
+font-size: 250%;
+display: inline-block;
+margin-bottom: 0;
+text-align: center;
+vertical-align: middle;
+font-weight: bold;
+
+-moz-user-select: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
 .btn123 {
     z-index:5;
     border-color: #c4c4c4;

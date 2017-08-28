@@ -7,7 +7,8 @@
         <h1 class="splash__title">Travel like a champion</h1>
         <h3 style="color:white;margin-left:6px;margin-top:11px;">Stress-free trips to your games or sporting events</h3>
         <br>
-        <button class="splash__btn"><%= link_to "Get Started", new_session_path, :style=>"text-decoration:none; color:white;"%></button>
+        <%= button_to "Get Started", new_session_path, class: "splash__btn", method: :get %> 
+        
       </div>
     </div>
 

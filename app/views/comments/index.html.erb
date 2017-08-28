@@ -1,0 +1,22 @@
+<h1>Amazing Reviews</h1>
+<h2>See what our customer said</h2>
+
+<div class=amazing-reviews>
+  <% @comments.each do |comment| %>
+  <blockquote>
+    <header>
+      <span><%= comment.updated_at %></span>
+      <span>By <em><%=current_user.name %></em></span>
+    </header>
+    <p><%= comment.description %></p>
+    <%= button_to 'Delete', listing_comment_path(@listing , comment),
+           method: :delete,
+           data: { confirm: 'Are you sure?' } , class: "btn btn-warning" %>
+  </blockquote>
+  <% end %>
+</div>
+
+
+	<h1>Leave a comment</h1>
+
+<%= render 'form' %>
