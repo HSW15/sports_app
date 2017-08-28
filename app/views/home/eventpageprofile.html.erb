@@ -7,6 +7,16 @@
 	{
 		z-index: 15;
 	}
+	.eventh2 {
+    text-align: center;
+}
+#event-table {
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
 </style>
 
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
@@ -33,7 +43,7 @@
 	    <%= image_tag ("admin4.jpg"), class: 'img-circle', style:"border-color:gray;border-width:2.5px;border-style:solid;margin-top:8.5px;margin-left:10px;"%>
 	    <div class="info" style="margin-top:-26px;margin-left:-4px;">
 	     <div style="margin-bottom:4px;"> <span style="font-size:14px;">Hi, <%=current_user.name%>!</span></div>
-				<b style="font-size:13px;margin-top:0px;">Step 1: </b><span style="font-size:13px;">Choose a game or event</span>
+				<b style="font-size:13px;margin-top:0px;">Step 1: </b><span style="font-size:13px;">Choose an upcoming event</span>
 	      <div><span style="font-weight:normal;font-size:12px;color:gray;float:none;margin-top:4px;"><%=Time.now.strftime("%I:%M%p")%></span>
 	    </div>
 		</div>
@@ -66,7 +76,7 @@ $('.load_modal').click( function() {
 				<a href="#0">
 					<div class="cd-project-title">
 						<h2>Malaysian Grand Prix </h2>
-						<p>Part of the Formula One World Championship</p>
+						<p>Part of the Formula One World Championship </p>
 						<div class="arrow_down" style="margin-left:-100px;">
 							<div class="encircle bounce animated">
 								<!-- <div class="arrow"> -->
@@ -132,29 +142,80 @@ $('.load_modal').click( function() {
 				<div class="preview-image">
 					<div class="cd-project-title">
 						<h2>Malaysian Grand Prix </h2>
-						<p>Part of the Formula One World Championship</p>
+						<p>Part of the Formula One World Championship<br>(29 Sept - 1 Oct 2017)</p>
 					</div>
 				</div>
 
 				<div class="cd-project-info">
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere?Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere?Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere?Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere?Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt!
+						Admission on Friday is on a roving seating basis and all visitors can sit in any available seats in any participating grandstands. Seating on Saturday and Sunday will be in the ticketed grandstand (K1, and F are roving seating within the grandstand).
+
+		New for 2017, most grandstands in the main Mall area cannot be booked on an individual basis. Instead, Main Grandstand provides roving access to available seats in the participating grandstands in the Mall area.
+
+	C2 Hillstand and K2 Hillstand are General Admission areas. </p>
+	<hr>
+	<p><u><em>Pit Walk</em></u><br>
+
+	A public pit lane walk is expected to be held on the Friday (subject to confirmation nearer to race date). The pit walk may only be open to certain ticket holders (more information will be provided as it is released).</p>
+
+	<hr>
+	<p><u><em>Delivery</em></u><br>
+
+	Please note: Standard tickets are available as physical tickets or e-tickets. If you opt for e-delivery, please be aware that ticket lanyards and ear plugs will be removed from your booking and you will not be charged for these.</p>
 
 
-					</p>
+
+					<table class="table table-condensed table-hover" id='event-table'>
+    <thead>
+      <tr>
+        <th>Entry</th>
+        <th>Type</th>
+        <th>Price</th>
+				<th>Select</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fri-Sun</td>
+        <td>Adult</td>
+        <td>$50</td>
+				<td>
+            <input type="checkbox" name="myTextEditBox" value="checked" />
+        </td>
+      </tr>
+      <tr>
+        <td>Fri-Sun</td>
+        <td>Kids</td>
+        <td>$20</td>
+				<td>
+            <input type="checkbox" name="myTextEditBox" value="checked" />
+        </td>
+      </tr>
+      <tr>
+        <td>Fri-Sun</td>
+        <td>Senior-citizen</td>
+        <td>$30</td>
+				<td>
+            <input type="checkbox" name="myTextEditBox" value="checked" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
 
 											<!-- https://codyhouse.co/gem/add-to-cart-interaction/ -->
-											<div style="margin-top:58px;">
+											<div style="margin-top:82.5px;">
 												<button class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;height: 33px;padding-bottom: 29px;">Continue</a></button>
 												<% @order_item = current_order.order_items.new %>
 												<% @products = Product.all%>
 												<%= form_for @order_item do |f| %>
-													<div class="input-group input-xs col-xs-3" style="position:absolute;width:124px;left:45.2%;margin-top:-55px;">
+													<div class="input-group input-xs col-xs-3" style="position:absolute;width:124px;left:45.2%;margin-top:-52.5px;">
 														<%= f.hidden_field :product_id, value: @products[2].id %>
 														<%= f.number_field :quantity, value: 0, class:"form-control input-sm", min: 1 %>
+
+
+
+
 														<div class="input-group-btn">
 															<%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
 														</div>
