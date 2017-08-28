@@ -1,0 +1,20 @@
+<div class="form-horizontal">
+
+<%=form_for ([@listing , @comment]) do |u| %>
+
+<div class="form-group">
+   <%= u.label :description ,:class => 'col-sm-2 control-label' %>
+   <div class="col-sm-8">
+     <%= u.text_field :description, :class => 'form-control' %>
+   </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-8">
+      <%= u.submit :class => 'btn btn-danger' %>
+  </div>
+</div>
+
+<% end %>
+
+</div>
