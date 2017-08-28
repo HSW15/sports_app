@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
     def index
       @listing = Listing.find(params[:listing_id])
       @comment = current_user.comments.new
-      @comments = Comment.all.order("created_at DESC")
+      @comments = Comment.where(listing_id: @listing.id).order("updated_at DESC")
     end
 
     def new
@@ -14,7 +14,6 @@ class CommentsController < ApplicationController
 
     def create
       @listing = Listing.find(params[:listing_id])
-      # @comment = current_user.comments.new(description: params[:description], question_id: @question.id)
       @comment = current_user.comments.new(comment_params)
       @comment.listing_id = @listing.id
       if @comment.save
@@ -43,7 +42,6 @@ class CommentsController < ApplicationController
     end
 
     def destroy
-      @listing = Listing.find(params[:listing_id])
       @comment = Comment.find(params[:id])
       @comment.destroy
       flash[:notice] = "Comment is deleted"

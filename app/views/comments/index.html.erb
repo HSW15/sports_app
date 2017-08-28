@@ -9,7 +9,7 @@
       <span>By <em><%=current_user.name %></em></span>
     </header>
     <p><%= comment.description %></p>
-    <%= button_to 'Delete', 
+    <%= button_to 'Delete', listing_comment_path(@listing , comment),
            method: :delete,
            data: { confirm: 'Are you sure?' } , class: "btn btn-warning" %>
   </blockquote>
