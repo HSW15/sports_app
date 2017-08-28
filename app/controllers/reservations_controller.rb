@@ -52,7 +52,7 @@ class ReservationsController < ApplicationController
     nonce_from_the_client = params[:checkout_form][:payment_method_nonce]
 
     result = Braintree::Transaction.sale(
-      :amount => @reservation.total, #this is currently hardcoded
+      :amount => current_order.total_price, #this is currently hardcoded
       :payment_method_nonce => nonce_from_the_client,
       :options => {
         :submit_for_settlement => true
@@ -60,6 +60,7 @@ class ReservationsController < ApplicationController
     )
     if result.success?
       @reservation.update(payment:true)
+      session[:order_id] = nil
       # byebug
       redirect_to current_user, :flash => {:success => "Transaction successful!"}
     else

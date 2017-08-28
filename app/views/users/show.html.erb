@@ -102,7 +102,7 @@
             <% if x.payment != true %>
             <%= button_to "Make Payment", go_payment_path(x.id),  :style=>"text-decoration:none;width:110px;margin-left:-7.5px;", class:"btn-primary btn btn-sm", method: :get%>
             <% else %>
-            <button class="btn-warning btn btn-sm" style="width:110px;"> Paid </button>
+            <button class="btn-warning btn btn-sm" style="width:110px;margin-left:-11px;"> Paid </button>
             <% end %>
 				</div>
 
