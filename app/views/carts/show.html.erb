@@ -1,7 +1,6 @@
-<h1>Carts#show</h1>
-<p>Find me in app/views/carts/show.html.erb</p>
 
-<% if @order_items.any? %>
+
+<!-- <% if @order_items.any? %>
   <% @order_items.each do |item| %>
     <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></p>
     <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
@@ -9,4 +8,70 @@
   <p>Your Total: <%= number_to_currency current_order.total_price %></p>
 <% else %>
   <p>Your shopping cart is empty.</p>
-<% end %>
+<% end %> -->
+
+
+<body class="cartlist">
+
+
+
+<div class="cart">
+    <div class="cart-top">
+      <h3 class="cart-top-title"style="margin-top:30px">Shopping Cart</h3>
+      <div class="cart-top-info"style="margin-top:-9px;"><%=@order_items.count%> items</div>
+      </div>
+<br><br><br>
+  <ul>
+
+
+
+<% if @order_items.any? %>
+<% @order_items.each do |item| %>
+
+<li class="cart-item">
+  <%=link_to order_item_path(item.id), method: :delete do %>
+  <i class="fa fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 5px;right: 6px;"></i>
+  <% end %>
+  <span class="cart-item-pic">
+ <img src="<%=item.product.photos%>">
+ </span>
+ <%= item.product.name %>
+ <span class="cart-item-desc">Quantity: <%= item.quantity %></span>
+ <span class="cart-item-price"> <%= number_to_currency (item.product.price * item.quantity)%></p></span>
+ <!-- <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"}, style:"font-size:8px;" %> -->
+
+</li>
+<%end%>
+    </ul>
+
+
+  <div class="cart-bottom">
+      Total:  <%= number_to_currency current_order.total_price %>
+      <!-- <a href="" class="cart-button">Continue</a> -->
+      <%= link_to "Continue", current_user, class:"cart-button", style:"margin-left:0px;"%>
+    </div>
+    <% else %>
+      <p>Your shopping cart is empty.</p>
+    <% end %>
+
+</body>
+<style>
+body{font: 13px/20px 'Lucida Grande', Verdana, sans-serif;
+color: #404040;
+// background: #eee;
+padding: 0;
+  margin: 0;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.13),
+      rgba(0, 0, 0, 0.13)
+    ),
+  url("http://images.huffingtonpost.com/2017-01-01-1483271051-5191660-AirbnbEtiquetteTIPS0316.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  background-size: cover;}
+#footer1 {
+  display:none;
+}
+</style>

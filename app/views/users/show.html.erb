@@ -51,8 +51,9 @@
 <section class="gallery" style="margin-top:-170px;">
 
 		<div class="prices" style="margin-left:auto;margin-right:auto;">
-
+        
       <% current_user.reservations.each do |x| %>
+
       <% @listing = Listing.find(x.listing_id) %>
       <!-- <div class="description" style="text-align:center;">
         <h3 style="font-weight:thick;">Formula 1 Grand Prix</h3>
@@ -61,7 +62,7 @@
 			<div class="img"><img src="https://a2.muscache.com/im/pictures/6152848/b04eddeb_original.jpg?aki_policy=x_medium"></div>
       <div class="img"><img src="https://a2.muscache.com/im/pictures/34792065/bae84a3f_original.jpg?aki_policy=x_medium"></div>
       <div class="img" style="position:absolute;"><img src="https://a2.muscache.com/im/pictures/1faf9a4c-f839-44da-bd37-65ddc928379e.jpg?aki_policy=x_medium">
-        <%=link_to (listing_reservation_path(x.id)) do %>
+        <%=link_to (listing_reservation_path(x.id)), method: :delete do %>
           <i class="fa fa-2x fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 10px;right: 9px;"></i>
         <% end %>
       </div>
