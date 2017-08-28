@@ -1,5 +1,133 @@
+<html class="page2html">
+<body class="page2body">
 
-<section style="background: url(<%= @listing.photos %>) no-repeat center center fixed; background-size:100%; display:block;" class="reservation_image_body">
+<% if @reservation.errors.full_messages.present? %>
+<%= @reservation.errors.full_messages %>
+<% end %>
+<div class="form">
+
+  <h1 style="font-size:23px;">Live at <%=@listing.name%></h1>
+
+
+<%= form_for [@listing, @reservation] do |f| %>
+
+  <div class="field-wrap">
+    <div class="text-field">
+
+      <%= f.date_field :start_date, min:Date.today, class:"special", style:"padding:6px;", value:Date.today %>
+
+    </div>
+  </div>
+
+  <div class="field-wrap" style="margin-top:-6.5px;">
+    <div class="text-field">
+    <!-- <label>
+      Check-Out<span class="req">*</span>
+    </label> -->
+    <!-- <%= f.date_select :end_date, {:include_blank => true, :default => nil} %> -->
+    <%= f.date_field :end_date, min:Date.today, class:"special", style:"padding:6px;", value:Date.today %>
+    </div>
+  </div>
+
+
+
+
+  <div class="field-wrap">
+    <div class="text-field">
+    <label>
+      Number Of Guests<span class="req">*</span>
+    </label>
+    <%= f.text_field :num_guests %>
+    </div>
+  </div>
+
+
+
+  <button class="button button-block" style="padding: 0;
+  border: none;"/><%= f.submit%></button>
+  <%end%>
+
+  </div>
+</div>
+</body>
+</html>
+
+<script>
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+  var $this = $(this),
+      label = $this.prev('label');
+
+	  if (e.type === 'keyup') {
+			if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+    	if( $this.val() === '' ) {
+    		label.removeClass('active highlight');
+			} else {
+		    label.removeClass('highlight');
+			}
+    } else if (e.type === 'focus') {
+
+      if( $this.val() === '' ) {
+    		label.removeClass('highlight');
+			}
+      else if( $this.val() !== '' ) {
+		    label.addClass('highlight');
+			}
+    }
+
+});
+
+$('.tab a').on('click', function (e) {
+
+  e.preventDefault();
+
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+
+  $(target).fadeIn(600);
+
+});
+</script>
+
+
+
+
+
+<!--
+<h1 style="color:white;text-align:center;"> Live at <%=@listing.name%> </h1><br>
+
+<div style="width:400px;margin-left:auto;margin-right:auto;">
+<%= form_for [@listing, @reservation] do |f| %>
+
+  <%= f.label :check_in, style:"color:white;" %>
+  <%= f.date_field :start_date %>
+  <%= f.label :check_out, style:"color:white;" %>
+  <%= f.date_field :end_date %>
+
+
+  <%= f.label :number_of_guests, style:"color:white;" %> <br>
+  <%= f.select :num_guests, [[1], [2], [3], [4], [5]] %>
+
+
+  <%= f.hidden_field :listing_id, value: @listing.id %>
+  <%= f.hidden_field :total %>
+
+  <div style="margin-top:10px;color:gray">
+  <%= f.submit%>
+</div>
+<% end %>
+</div> -->
+
+<!-- <section style="background: url(<%= @listing.photos %>) no-repeat center center fixed; background-size:100%; display:block;" class="reservation_image_body">
     <div class="container clearfix">
         <div class="row">
             <div class="col-md-12">
@@ -72,41 +200,38 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-<% if @reservation.errors.full_messages.present? %>
-<%= @reservation.errors.full_messages %>
-<% end %>
-
-
-<h1 style="color:white;text-align:center;"> Live at <%=@listing.name%> </h1><br>
-
-<div style="width:400px;margin-left:auto;margin-right:auto;">
-<%= form_for [@listing, @reservation] do |f| %>
-
-  <%= f.label :check_in, style:"color:white;" %>
-  <%= f.date_field :start_date %>
-  <%= f.label :check_out, style:"color:white;" %>
-  <%= f.date_field :end_date %>
-
-
-  <%= f.label :number_of_guests, style:"color:white;" %> <br>
-  <%= f.select :num_guests, [[1], [2], [3], [4], [5]] %>
-
-
-  <%= f.hidden_field :listing_id, value: @listing.id %>
-  <%= f.hidden_field :total %>
-
-  <div style="margin-top:10px;color:gray">
-  <%= f.submit%>
-</div>
-<% end %>
-</div>
-
+    </div> -->
+    <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker5').datetimepicker({
+                        minDate: "<%=DateTime.now%>",
+                        defaultDate: "<%=DateTime.now%>",
+                        disabledDates: [
+                            moment("12/25/2013"),
+                            new Date(2013, 11 - 1, 21),
+                            "11/22/2013 00:53"
+                        ]
+                    });
+              $("#datetimepicker5").on("dp.change", function (e) {
+               $('#datetimepicker6').data("DateTimePicker").minDate(e.date);
+           });
+                });
+                $(function () {
+                    $('#datetimepicker6').datetimepicker({
+                        minDate: "<%=DateTime.now%>",
+                        defaultDate: "<%=DateTime.now%>",
+                        disabledDates: [
+                            moment("12/25/2013"),
+                            new Date(2013, 11 - 1, 21),
+                            "11/22/2013 00:53"
+                        ]
+                    });
+                $("#datetimepicker6").on("dp.change", function (e) {
+                $('#datetimepicker5').data("DateTimePicker").maxDate(e.date);
+            });
+                });
+            </script>
 <style>
-body {background-color:grey;}
-#footer1 {display: none;}
-</style>
+#footer1 {display:none};
 
-</section>
+</style>

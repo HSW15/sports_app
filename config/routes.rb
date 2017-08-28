@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   get "reservations/:id/payment", to: "reservations#payment", as: "go_payment"
   post "reservations/:id/checkout", to: "reservations#checkout", as: "go_checkout"
+  # get '/listings/:listing_id/reservations/:id', to: 'reservations#destroy', as: 'cancel'
 
   # Cart
   resource :cart, only: [:show]
