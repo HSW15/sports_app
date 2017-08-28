@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   # mount_uploader :avatar, AvatarUploader
-  has_many :reservations
-  has_many :orders 
+  has_many :reservations, dependent: :destroy
+  has_many :orders
 
   def self.from_omniauth(auth)
 

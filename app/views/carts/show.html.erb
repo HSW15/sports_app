@@ -47,7 +47,8 @@
 
   <div class="cart-bottom">
       Total:  <%= number_to_currency current_order.total_price %>
-      <a href="#" class="cart-button">Continue</a>
+      <!-- <a href="" class="cart-button">Continue</a> -->
+      <%= link_to "Continue", current_user, class:"cart-button", style:"margin-left:0px;"%>
     </div>
     <% else %>
       <p>Your shopping cart is empty.</p>
