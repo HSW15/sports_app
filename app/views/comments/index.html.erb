@@ -9,17 +9,14 @@
       <span>By <em><%=current_user.name %></em></span>
     </header>
     <p><%= comment.description %></p>
-    <% if current_user == current_user %>
-    <%= button_to 'Delete',
+    <%= button_to 'Delete', 
            method: :delete,
-           data: { confirm: 'Are you sure?' }  %>
-           <% end %>
+           data: { confirm: 'Are you sure?' } , class: "btn btn-warning" %>
   </blockquote>
   <% end %>
 </div>
 
 
 	<h1>Leave a comment</h1>
-
 
 <%= render 'form' %>
