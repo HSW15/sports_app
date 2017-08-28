@@ -40,7 +40,7 @@
     <section class="gallery" style="margin-top:-170px;">
   		<div class="prices" style="margin-left:auto;margin-right:auto;">
       <h3 style="color:white;font-size:21px;margin-bottom:-14px;text-align:center;">Training Pass</h3>
-      <% @train = Listing.where(purpose:"train").order("name").page(params[:page]).per(4) %>
+      <% @train = Listing.where(purpose:"train").order("name").page(params[:page]).per(5) %>
 			<div class="img"><img src="<%=@train[2].photos%>"></div>
       <div class="img"><img src="<%=@train[1].photos%>"></div>
       <div class="img" style="position:absolute;"><img src="<%=@train[3].photos%>">

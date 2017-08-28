@@ -1,4 +1,18 @@
 
+<!-- <% @reservations.each do |reservation| %>
+<li class="cart-item">
+<i class="fa fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 5px;right: 6px;"></i>
+ <span class="cart-item-pic">
+   <img src="<%=Listing.find(reservation.listing_id).photos%>">
+ </span>
+ <%=Listing.find(reservation.listing_id).name%>
+ <span class="cart-item-desc"><%=(reservation.end_date - reservation.start_date).to_i%> days </span>
+ <span class="cart-item-price"><%=number_to_currency (reservation.total)%></span>
+</li>
+<%end%>
+<%end%> -->
+
+
 <div class="add_to_cart">
             <!-- https://codyhouse.co/gem/add-to-cart-interaction/ -->
             <main>

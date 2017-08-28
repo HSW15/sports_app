@@ -12,8 +12,7 @@
 
 
 <body class="cartlist">
-  <% @reservations = current_user.reservations.where(payment:false) %>
-  <% if @reservations.any? %>
+
 
 
 <div class="cart">
@@ -23,25 +22,16 @@
       </div>
 <br><br><br>
   <ul>
-    <% @reservations.each do |reservation| %>
- <li class="cart-item">
-   <i class="fa fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 5px;right: 6px;"></i>
-     <span class="cart-item-pic">
-       <img src="<%=Listing.find(reservation.listing_id).photos%>">
-     </span>
-     <%=Listing.find(reservation.listing_id).name%>
-     <span class="cart-item-desc"><%=(reservation.end_date - reservation.start_date).to_i%> days </span>
-     <span class="cart-item-price"><%=number_to_currency (reservation.total)%></span>
- </li>
- <%end%>
- <%end%>
+
 
 
 <% if @order_items.any? %>
 <% @order_items.each do |item| %>
 
 <li class="cart-item">
+  <%=link_to order_item_path(item.id), method: :delete do %>
   <i class="fa fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 5px;right: 6px;"></i>
+  <% end %>
   <span class="cart-item-pic">
  <img src="<%=item.product.photos%>">
  </span>
