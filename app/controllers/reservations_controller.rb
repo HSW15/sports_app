@@ -19,6 +19,11 @@ class ReservationsController < ApplicationController
     @reservation =  @user.reservations.new(reservation_params)
     @reservation.listing_id = @listing.id
     if @reservation.save
+      @product = Product.create(name:@listing.name,price:@reservation.total,photos:@listing.photos)
+      @order_item = current_order.order_items.create(quantity:1, product_id:@product.id)
+      @update = current_order.total_price + @reservation.total
+      # byebug
+      current_order.update(total_price:@update)
       redirect_to root_path
     else
       @errors = @reservation.errors.full_messages
@@ -36,6 +41,7 @@ class ReservationsController < ApplicationController
 
   def payment
     @client_token = Braintree::ClientToken.generate
+    render "products/index"
   end
 
   def checkout

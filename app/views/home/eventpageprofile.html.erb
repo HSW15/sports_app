@@ -1,3 +1,15 @@
+<style>
+	.nav> li
+	{
+    z-index: 15;
+	}
+	.nav__links
+	{
+		z-index: 15;
+	}
+</style>
+
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 
 
@@ -12,9 +24,35 @@
 
 
 
+<body class="trialanderror" style="background-color:black;">
+<div class ="load_modal">
+	<div class="notifications" style="margin-top:7px;">
+
+	  <div class="notify gr" style="background: linear-gradient(to bottom, rgba(254,187,187,1) 0%,rgba(254,144,144,1) 45%,rgba(255,92,92,1) 100%);">
+
+	    <%= image_tag ("admin4.jpg"), class: 'img-circle', style:"border-color:gray;border-width:2.5px;border-style:solid;margin-top:8.5px;margin-left:10px;"%>
+	    <div class="info" style="margin-top:-26px;margin-left:-4px;">
+	     <div style="margin-bottom:4px;"> <span style="font-size:14px;">Hi, <%=current_user.name%>!</span></div>
+				<b style="font-size:13px;margin-top:0px;">Step 1: </b><span style="font-size:13px;">Choose a game or event</span>
+	      <div><span style="font-weight:normal;font-size:12px;color:gray;float:none;margin-top:4px;"><%=Time.now.strftime("%I:%M%p")%></span>
+	    </div>
+		</div>
+
+	  </div>
+
+	</div>
+</div>
+<script>
+console.log("hi");
+$('body').click(function(e){ console.log(e.target) })
+$('.load_modal').click( function() {
 
 
-<body class="trialanderror">
+  $(this).fadeOut();
+});
+</script>
+
+
 	<div class="nav_button_event_page">
 	<a class="cd-nav-trigger cd-text-replace" href="#">Menu
 		<div>
@@ -93,8 +131,8 @@
 			<li class="">
 				<div class="preview-image">
 					<div class="cd-project-title">
-						<h2>Project 1</h2>
-						<p>Brief description of the project here</p>
+						<h2>Malaysian Grand Prix </h2>
+						<p>Part of the Formula One World Championship</p>
 					</div>
 				</div>
 
@@ -107,51 +145,26 @@
 
 					</p>
 
-					<div class="add_to_cart">
+
 											<!-- https://codyhouse.co/gem/add-to-cart-interaction/ -->
-											<main>
-												<div class="tickets"><a href="#0" class="cd-add-to-cart btn" data-price="50.99" style="margin-top: 46px;">Add To Cart</a></div>
-												<div class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;">Continue</a></div>
-												<!-- <div class="tickets"><div class="btn">Purchase Tickets</div></div> -->
-											</main>
-
-
-											<!-- <main>
-												<a href="#0">Continue</a>
-											</main> -->
-
-											<div class="cd-cart-container empty">
-												<a href="#0" class="cd-cart-trigger" style="text-decoration:none;">
-													Cart
-													<ul class="count"> <!-- cart items count -->
-														<li>0</li>
-														<li>0</li>
-													</ul> <!-- .count -->
-												</a>
-
-												<div class="cd-cart">
-													<div class="wrapper">
-														<header>
-															<h2>Cart</h2>
-															<span class="undo">Item removed. <a href="#0" style="text-decoration:none;">Undo</a></span>
-														</header>
-
-														<div class="body">
-															<ul>
-																<!-- products added to the cart will be inserted here using JavaScript -->
-															</ul>
+											<div style="margin-top:58px;">
+												<button class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;height: 33px;padding-bottom: 29px;">Continue</a></button>
+												<% @order_item = current_order.order_items.new %>
+												<% @products = Product.all%>
+												<%= form_for @order_item do |f| %>
+													<div class="input-group input-xs col-xs-3" style="position:absolute;width:124px;left:45.2%;margin-top:-55px;">
+														<%= f.hidden_field :product_id, value: @products[2].id %>
+														<%= f.number_field :quantity, value: 0, class:"form-control input-sm", min: 1 %>
+														<div class="input-group-btn">
+															<%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
 														</div>
-
-														<footer>
-
-															<a href="#0" class="checkout btn"><em>Current Total: $<span>0</span></em></a>
-														</footer>
 													</div>
-												</div> <!-- .cd-cart -->
-											</div> <!-- cd-cart-container -->
-						<!-- <%=link_to "Continue", listings_path, style:"text-decoration:none;"%> -->
+											<% end %>
+										</div>
 
-					</div>
+
+
+
 				</div> <!-- .cd-project-info -->
 
 			</li>
@@ -159,8 +172,8 @@
 			<li class="">
 				<div class="preview-image">
 					<div class="cd-project-title">
-						<h2>Project 2</h2>
-						<p>Brief description of the project here</p>
+						<h2>Southeast Asian Games</h2>
+						<p>A Southeast Asian multisport event </p>
 					</div>
 				</div>
 
@@ -171,59 +184,29 @@
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
 					</p>
-					<div class="add_to_cart">
-											<!-- https://codyhouse.co/gem/add-to-cart-interaction/ -->
-											<main>
-												<div class="tickets"><a href="#0" class="cd-add-to-cart btn" data-price="50.99" style="margin-top: 46px;">Add To Cart</a></div>
-												<div class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;">Continue</a></div>
-												<!-- <div class="tickets"><div class="btn">Purchase Tickets</div></div> -->
-											</main>
+					<div style="margin-top:58px;">
+						<button class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;height: 33px;padding-bottom: 29px;">Continue</a></button>
+						<% @order_item = current_order.order_items.new %>
+						<% @products = Product.all%>
+						<%= form_for @order_item do |f| %>
+							<div class="input-group input-xs col-xs-3" style="position:absolute;width:124px;left:45.2%;margin-top:-55px;">
+								<%= f.hidden_field :product_id, value: @products[2].id %>
+								<%= f.number_field :quantity, value: 0, class:"form-control input-sm", min: 1 %>
+								<div class="input-group-btn">
+									<%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
+								</div>
+							</div>
+					<% end %>
+				</div>
 
-
-											<!-- <main>
-												<a href="#0">Continue</a>
-											</main> -->
-
-											<div class="cd-cart-container empty">
-												<a href="#0" class="cd-cart-trigger" style="text-decoration:none;">
-													Cart
-													<ul class="count"> <!-- cart items count -->
-														<li>0</li>
-														<li>0</li>
-													</ul> <!-- .count -->
-												</a>
-
-												<div class="cd-cart">
-													<div class="wrapper">
-														<header>
-															<h2>Cart</h2>
-															<span class="undo">Item removed. <a href="#0" style="text-decoration:none;">Undo</a></span>
-														</header>
-
-														<div class="body">
-															<ul>
-																<!-- products added to the cart will be inserted here using JavaScript -->
-															</ul>
-														</div>
-
-														<footer>
-
-															<a href="#0" class="checkout btn"><em>Current Total: $<span>0</span></em></a>
-														</footer>
-													</div>
-												</div> <!-- .cd-cart -->
-											</div> <!-- cd-cart-container -->
-						<!-- <%=link_to "Continue", listings_path, style:"text-decoration:none;"%> -->
-
-					</div>
 				</div> <!-- .cd-project-info -->
 			</li>
 
 			<li class="">
 				<div class="preview-image">
 					<div class="cd-project-title">
-						<h2>Project 3</h2>
-						<p>Brief description of the project here</p>
+						<h2>Thomas & Uber Cup</h2>
+						<p>Biannual international badminton competition</p>
 					</div>
 				</div>
 
@@ -234,59 +217,28 @@
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
 					</p>
-					<div class="add_to_cart">
-											<!-- https://codyhouse.co/gem/add-to-cart-interaction/ -->
-											<main>
-												<div class="tickets"><a href="#0" class="cd-add-to-cart btn" data-price="50.99" style="margin-top: 46px;">Add To Cart</a></div>
-												<div class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;">Continue</a></div>
-												<!-- <div class="tickets"><div class="btn">Purchase Tickets</div></div> -->
-											</main>
-
-
-											<!-- <main>
-												<a href="#0">Continue</a>
-											</main> -->
-
-											<div class="cd-cart-container empty">
-												<a href="#0" class="cd-cart-trigger" style="text-decoration:none;">
-													Cart
-													<ul class="count"> <!-- cart items count -->
-														<li>0</li>
-														<li>0</li>
-													</ul> <!-- .count -->
-												</a>
-
-												<div class="cd-cart">
-													<div class="wrapper">
-														<header>
-															<h2>Cart</h2>
-															<span class="undo">Item removed. <a href="#0" style="text-decoration:none;">Undo</a></span>
-														</header>
-
-														<div class="body">
-															<ul>
-																<!-- products added to the cart will be inserted here using JavaScript -->
-															</ul>
-														</div>
-
-														<footer>
-
-															<a href="#0" class="checkout btn"><em>Current Total: $<span>0</span></em></a>
-														</footer>
-													</div>
-												</div> <!-- .cd-cart -->
-											</div> <!-- cd-cart-container -->
-						<!-- <%=link_to "Continue", listings_path, style:"text-decoration:none;"%> -->
-
-					</div>
+					<div style="margin-top:58px;">
+						<button class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;height: 33px;padding-bottom: 29px;">Continue</a></button>
+						<% @order_item = current_order.order_items.new %>
+						<% @products = Product.all%>
+						<%= form_for @order_item do |f| %>
+							<div class="input-group input-xs col-xs-3" style="position:absolute;width:124px;left:45.2%;margin-top:-55px;">
+								<%= f.hidden_field :product_id, value: @products[2].id %>
+								<%= f.number_field :quantity, value: 0, class:"form-control input-sm", min: 1 %>
+								<div class="input-group-btn">
+									<%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
+								</div>
+							</div>
+					<% end %>
+				</div>
 				</div> <!-- .cd-project-info -->
 			</li>
 
 			<li class="">
 				<div class="preview-image">
 					<div class="cd-project-title">
-						<h2>Project 4</h2>
-						<p>Brief description of the project here</p>
+						<h2>ESL One</h2>
+						<p>Premier international eSports tournement</p>
 					</div>
 				</div>
 
@@ -297,53 +249,21 @@
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
 					</p>
-					<div class="add_to_cart">
-											<!-- https://codyhouse.co/gem/add-to-cart-interaction/ -->
-											<main>
-												<div class="tickets"><a href="#0" class="cd-add-to-cart btn" data-price="50.99" style="margin-top: 46px;">Add To Cart</a></div>
-												<div class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;">Continue</a></div>
-												<!-- <div class="tickets"><div class="btn">Purchase Tickets</div></div> -->
-											</main>
+					<div style="margin-top:58px;">
+						<button class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;height: 33px;padding-bottom: 29px;">Continue</a></button>
+						<% @order_item = current_order.order_items.new %>
+						<% @products = Product.all%>
+						<%= form_for @order_item do |f| %>
+							<div class="input-group input-xs col-xs-3" style="position:absolute;width:124px;left:45.2%;margin-top:-55px;">
+								<%= f.hidden_field :product_id, value: @products[2].id %>
+								<%= f.number_field :quantity, value: 0, class:"form-control input-sm", min: 1 %>
+								<div class="input-group-btn">
+									<%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
+								</div>
+							</div>
+					<% end %>
+				</div>
 
-
-											<!-- <main>
-												<a href="#0">Continue</a>
-											</main> -->
-
-											<div class="cd-cart-container empty">
-												<a href="#0" class="cd-cart-trigger" style="text-decoration:none;">
-													Cart
-													<ul class="count"> <!-- cart items count -->
-														<li>0</li>
-														<li>0</li>
-													</ul> <!-- .count -->
-												</a>
-
-												<div class="cd-cart">
-													<div class="wrapper">
-														<header>
-															<h2>Cart</h2>
-															<span class="undo">Item removed. <a href="#0" style="text-decoration:none;">Undo</a></span>
-														</header>
-
-														<div class="body">
-															<ul>
-																<!-- products added to the cart will be inserted here using JavaScript -->
-															</ul>
-														</div>
-
-														<footer>
-
-															<a href="#0" class="checkout btn"><em>Current Total: $<span>0</span></em></a>
-														</footer>
-													</div>
-												</div> <!-- .cd-cart -->
-											</div> <!-- cd-cart-container -->
-						<!-- <%=link_to "Continue", listings_path, style:"text-decoration:none;"%> -->
-
-					</div>
-				</div> <!-- .cd-project-info -->
-			</li>
 		</ul> <!-- .cd-projects -->
 
 		<button class="scroll cd-text-replace">Scroll</button>
@@ -370,7 +290,9 @@
 			</span>
 			CONTINUE
 		</a>
+
 	</div> -->
+
 
 
 </body>
