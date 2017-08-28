@@ -46,7 +46,7 @@
       <div class="img" style="position:absolute;"><img src="<%=@train[3].photos%>">
         <% @product = @products[0] %>
         <%= form_for @order_item do |f| %>
-          <div class="input-group input-xs col-xs-3" style="position:absolute;bottom:8px;right:62px;">
+          <div class="input-group input-xs col-xs-3" style="position:absolute;bottom:37.5px;right:62px;">
             <%= f.hidden_field :product_id, value: @product.id %>
             <%= f.number_field :quantity, value: 0, class:"form-control input-sm", style:"width:45px;", min: 0 %>
             <div class="input-group-btn">
@@ -73,7 +73,7 @@
       <div class="img" style="position:absolute;"><img src="<%=@nutrition[3].photos%>">
         <% @product1 = @products[1] %>
         <%= form_for @order_item do |f| %>
-          <div class="input-group input-xs col-xs-3" style="position:absolute;bottom:8px;right:62px;">
+          <div class="input-group input-xs col-xs-3" style="position:absolute;bottom:37.5px;right:62px;">
             <%= f.hidden_field :product_id, value: @product1.id %>
             <%= f.number_field :quantity, value: 0, class:"form-control input-sm", style:"width:45px;", min: 0 %>
             <div class="input-group-btn">
@@ -195,7 +195,7 @@
 
 		</div>
     <div class="tickets",style="margin-top:58px;">
-      <%= button_to "Continue", user_path(current_user.id), class:"btn", style:"background: #ee7600;margin-top:293px;margin-left:10px;", method: :get%>
+      <%= button_to "Continue", user_path(current_user.id), class:"btn", style:"background: #ee7600;margin-top:275px;margin-left:10px;", method: :get%>
     </div>
 
 

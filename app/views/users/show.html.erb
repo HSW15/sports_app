@@ -2,6 +2,33 @@
 <html class="page3html">
 
   <body class="page3body">
+    <!-- Notifications  -->
+    <div class ="load_modal">
+      <div class="notifications" style="margin-top:4.25px;">
+
+  		  <div class="notify gr" style="background: linear-gradient(to bottom, rgba(180,227,145,1) 0%,rgba(97,196,25,1) 50%,rgba(180,227,145,1) 100%);">
+
+  		    <%= image_tag ("admin4.jpg"), class: 'img-circle', style:"border-color:gray;border-width:2.5px;border-style:solid;margin-top:8.5px;margin-left:10px;"%>
+  		    <div class="info" style="margin-top:-27px;margin-left:-4px;">
+  		     <div style="margin-bottom:-2px;"> <span style="font-size:13px;">Congrats, <%=current_user.name%>!</span></div>
+  					<span style="font-size:13px;">Go ahead and make a payment</span>
+  		      <div><span style="font-weight:normal;font-size:11px;color:gray;float:none;margin-top:0px;"><%=Time.now.strftime("%I:%M%p")%></span>
+  		    </div>
+  			</div>
+
+  		  </div>
+
+  		</div>
+  	</div>
+    <script>
+    console.log("hi");
+    $('body').click(function(e){ console.log(e.target) })
+    $('.load_modal').click( function() {
+    	debugger;
+
+      $(this).fadeOut();
+    });
+    </script>
 
 
 <div class="profile_bar">
@@ -51,7 +78,7 @@
 <section class="gallery" style="margin-top:-170px;">
 
 		<div class="prices" style="margin-left:auto;margin-right:auto;">
-        
+
       <% current_user.reservations.each do |x| %>
 
       <% @listing = Listing.find(x.listing_id) %>
@@ -73,7 +100,7 @@
 					<h4><%= link_to "#{@listing.name}", listing_path(@listing.id), :style=>"text-decoration:none;color:white;"%></h4>
           <h5> <%= x.start_date.strftime("%B %d, %Y") %> to <%= x.end_date.strftime("%B %d, %Y") %> </h5>
             <% if x.payment != true %>
-            <%= button_to "Make Payment", go_payment_path(x.id),  :style=>"text-decoration:none;width:110px;", class:"btn-primary btn btn-sm", method: :get%>
+            <%= button_to "Make Payment", go_payment_path(x.id),  :style=>"text-decoration:none;width:110px;margin-left:-7.5px;", class:"btn-primary btn btn-sm", method: :get%>
             <% else %>
             <button class="btn-warning btn btn-sm" style="width:110px;"> Paid </button>
             <% end %>
