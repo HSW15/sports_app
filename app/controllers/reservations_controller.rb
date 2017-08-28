@@ -8,7 +8,8 @@ class ReservationsController < ApplicationController
   def new
     @user = current_user
     @listing = Listing.find(@listing.id)
-    @reservation = current_user.reservations.new
+    @reservation = @user.reservations.new
+
   end
 
   def create
