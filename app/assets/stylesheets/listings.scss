@@ -249,7 +249,7 @@ nav{
         margin-left: 0px;
     word-wrap: break-word ;
         overflow-wrap: break-word;
-    font-size: 15px ;
+    font-size: 2vw ;
     line-height: 18px ;
     letter-spacing: 0.2px ;
     padding-top: 0px ;
@@ -258,10 +258,10 @@ nav{
 }
 .anchor_18fdjt5 {
     display: inline-block ;
-    padding: 16px 0 16px 0 ;
-        padding-top: 16px;
+    
+        padding-top: 1%;
         padding-right: 0px;
-        padding-bottom: 16px;
+        padding-bottom: 1%;
         padding-left: 0px;
 }
 .component_9w5i1l-o_O-navigation_3mnosr {
@@ -612,16 +612,24 @@ display: inline ;
         border-bottom-style: solid;
         border-bottom-color: rgb(219, 219, 219);
 }
+.rule_1176irmj{
+    border-bottom: 3px solid black !important;
+        border-bottom-width: 3px;
+        border-bottom-style: solid;
+        border-bottom-color: black;
+
+}
 .row_2h22gn {
     margin-left: -8px !important;
     margin-right: -8px !important;
 }
 .column_1rnz84d-o_O-column-sm-3_1c7jm1s {
+    padding-top:0%;
     padding-left: 8px !important;
     padding-right: 8px !important;
     min-height: 1px !important;
     position: relative !important;
-    width: 25% !important;
+    width: 100% !important;
     float: left !important;
 }
 .room__dls .icon-size {
@@ -629,7 +637,7 @@ display: inline ;
 }
 
 .room__dls .text-small {
-    font-size: 15px !important;
+    font-size: 130% !important;
     line-height: 18px !important;
 }
 
