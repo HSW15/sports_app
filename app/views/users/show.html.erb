@@ -48,7 +48,9 @@
 					<div class="col2 first">
 						<img src="http://images.contactmusic.com/newsimages/david_beckham_1133321.jpg" alt="">
 						<h1>david beckham</h1>
-						<p><p>Professional soccer player, husband, father. England.<br><i><%= current_user.name %></i></br></p>
+						<p><p>Professional soccer player, husband, father. England.<br>
+              <!-- <a href="http://bit.ly/2wDhryU">Learn about the a href attribute</a> -->
+              <!-- <i><%= current_user.name %></i></br></p> -->
 
 
 					</div>
@@ -66,6 +68,7 @@
           <li><i class="fa fa-check"></i> <%=link_to "My Reservations", user_path, :style=>"text-decoration:none;"%> </li>
           <li><i class="fa fa-list-alt"></i> <%=link_to "Travel Guide", listings_path, :style=>"text-decoration:none;"%> </li>
           <li><i class="fa fa-bar-chart"></i><%=link_to "Events", events_show_path, :style=>"text-decoration:none;"%></li>
+          <!-- <li><i class="fa fa-star"></i><%=link_to "Favorites", events_show_path, :style=>"text-decoration:none;"%></li> -->
           <li><i class="fa fa-dashboard "></i> Manage Profile </li>
         </ul>
       </div>
