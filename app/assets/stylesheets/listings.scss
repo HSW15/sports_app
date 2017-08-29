@@ -772,3 +772,8 @@ display:table;
 		input[value="8"]:checked ~ .container .carousel img:nth-child(8) { -webkit-transform: rotateY(315deg) translateZ(540px) scale(1); opacity: 1; }
 
 }
+
+.button button--primary button--full{
+    font-size: x-large;
+    line-height: 100%;
+}
