@@ -1,293 +1,152 @@
-<body class="listing_show_body" style="background-color: ghostwhite;">
 
-		<div class="body">
-			<div class="listing-picture" style="height:25vw;">
-				<div data-reactid="97"><!-- react-empty: 98 --><!-- react-empty: 99 -->
-					<div data-reactid="100">
-					  <div class="photos_jx8qn9-o_O-withModal_13xlah4" style="height:25vw;" data-reactid="101">
-					    <span data-reactid="102">
-					      <img alt="" class="hide" src="https://a0.muscache.com/im/pictures/22903552/b41736ff_original.jpg?aki_policy=large" srcset="https://a0.muscache.com/im/pictures/22903552/b41736ff_original.jpg?aki_policy=large 639w,https://a0.muscache.com/im/pictures/22903552/b41736ff_original.jpg?aki_policy=xx_large 1440w" data-reactid="103" width="0">
-					      <div class="hide" data-reactid="104">
-					        <img class="carousel-image img-responsive-height" src="https://a0.muscache.com/im/pictures/22903548/206fd625_original.jpg?aki_policy=x_large" alt="Grand deck autour de la piscine avec transats, espace repas ombragé pour 8 personnes, barbecue et plancha." data-reactid="105">
-					        <img class="carousel-image img-responsive-height" src="https://a0.muscache.com/im/pictures/22903733/a5bf075a_original.jpg?aki_policy=x_large" alt="Terrasse plein sud sans aucun vis à vis.Piscine 7*4 équipée d'une alarme et d'une bâche thermique." data-reactid="106">
-					      </div>
-					      <div class="btn124" style="height: 15%; width: 45%; position: absolute; padding-top:5%;text-shadow: 2px 2px 0px #000; font-size:2.2vw;" data-reactid="114a">
-					      	<div style=" width:92%;background-color:whitesmoke;;opacity:1;">
-					      		<p data-reactid="116a">"Travel like a Champion."</p>
-					      	</div>
-					      </div>
-					      <span data-reactid="107"><!-- react-empty: 2398 -->
-					        <div data-reactid="112" style="height:25vw"">
-					          <div class="coverImage_75zala" style="background-image:url(<%= @listing.photos %>);" aria-hidden="true" data-reactid="113">
-				
-					          </div>
-					          
-					        </div>
-					      </span>
-					      
-					      
-					    </span>
-					  </div>
-					</div>
-				</div>
+<body class="listing_index_body2">
+	<div class ="load_modal">
+		<div class="notifications" style="margin-top:4.25px;">
+
+		  <div class="notify gr">
+
+		    <%= image_tag ("admin4.jpg"), class: 'img-circle', style:"border-color:gray;border-width:2.5px;border-style:solid;margin-top:8.5px;margin-left:10px;"%>
+		    <div class="info" style="margin-top:-27px;margin-left:-4px;">
+		     <div style="margin-bottom:-2px;"> <span style="font-size:13px;">Great Job, <%=current_user.name%>!</span></div>
+					<b style="font-size:12px;margin-top:-2px;">Step 2: </b><span style="font-size:13px;">Choose a hotel</span>
+		      <div><span style="font-weight:normal;font-size:11px;color:gray;float:none;margin-top:0px;"><%=Time.now.strftime("%I:%M%p")%></span>
+		    </div>
+			</div>
+
+		  </div>
+
+		</div>
+	</div>
+	<script>
+	console.log("hi");
+	$('body').click(function(e){ console.log(e.target) })
+	$('.load_modal').click( function() {
+		debugger;
+	  $(this).fadeOut();
+	});
+	</script>
+
+	<div style="width:206px;margin-left:auto;margin-right:auto;">
+
+		    <input stylechecked id="one" name="multiples" type="radio" value="1">
+        <label for="one"></label>
+
+		    <input id="two" name="multiples" type="radio" value="2">
+        <label for="two"></label>
+
+        <input id="three" name="multiples" type="radio" value="3">
+        <label for="three"></label>
+
+        <input id="four" name="multiples" type="radio" value="4">
+        <label for="four"></label>
+
+        <input id="five" name="multiples" type="radio" value="5">
+        <label for="five"></label>
+
+        <input id="six" name="multiples" type="radio" value="6">
+        <label for="six"></label>
+
+        <input id="seven" name="multiples" type="radio" value="7">
+        <label for="seven"></label>
+
+        <input id="eight" name="multiples" type="radio" value="8">
+        <label for="eight"></label>
+
+		<div class="container">
+			<div class="carousel prices" style="margin-top:-40px;margin-left:-179px;">
+
+			<!-- <div class="img"><img src="  http://needwant.com/wp-content/uploads/2013/11/2013-04-12-16.58.50-2.jpg" alt="Landscape 1"></div> -->
+      <div class="price-stamp"></div>
+				<img src="http://thetaleoftwotings.com/wp-content/uploads/2014/01/P1160797.jpg" alt="Landscape 2">
+				<img src="https://a0.muscache.com/im/pictures/9154330/a0700176_original.jpg?aki_policy=xx_large" alt="Landscape 3">
+				<img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/13133201_619510394864844_3333733000320571527_n.jpg?oh=76bb4a3ed4c211b3472119cfbb231507&oe=5A315217" alt="Landscape 4">
+				<img src="http://blog.tortugabackpacks.com/wp-content/uploads/2017/06/airbnb-alternatives.jpg" alt="Landscape 5">
+				<img src="https://businessfirstfamily.com/wp-content/uploads/2017/02/luxury-retreats-acquired-airbnb.jpg" alt="Landscape 6">
+				<img src="http://www.cpp-luxury.com/wp-content/uploads/2017/06/Public-Hotel-New-York-Ian-Schrager.jpg" alt="Landscape 7">
+				<img src="https://media.cntraveler.com/photos/56e31b19c3ce11fb6b06be36/master/pass/one-fine-stay-bedroom-interior.png" alt="Landscape 8">
+        <!-- Captions -->
+				<div class="rating" style="-webkit-transform: rotateY(45deg) translateZ(541px) scale(.8);">
+           <h1>9.1/10</h1>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(45deg) translateZ(541px) scale(.8);">
+           <h3><%=link_to "#{@hotel[0].name}", listing_path("#{@hotel[0].id}"), style:"text-decoration:none;"%><br></h3>
+           <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+				<div class="rating" style="-webkit-transform: rotateY(90deg) translateZ(541px) scale(.8);">
+           <h1>8.9/10</h1>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(90deg) translateZ(541px) scale(.8);">
+            <h3><%=link_to "#{@hotel[1].name}", listing_path("#{@hotel[1].id}"), style:"text-decoration:none;"%></h3>
+            <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+				<div class="rating" style="-webkit-transform: rotateY(135deg) translateZ(541px) scale(.8);">
+           <h1>8.5/10</h1>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(135deg) translateZ(541px) scale(.8);">
+           <h3><%=link_to "#{@hotel[2].name}", listing_path("#{@hotel[2].id}"), style:"text-decoration:none;"%></h3>
+           <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+				<div class="rating" style="-webkit-transform: rotateY(180deg) translateZ(541px) scale(.8);">
+           <h1>8.4/10</h1>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(180deg) translateZ(541px) scale(.8);">
+            <h3><%=link_to "#{@hotel[3].name}", listing_path("#{@hotel[3].id}"), style:"text-decoration:none;"%></h3>
+            <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+				<div class="rating" style="-webkit-transform: rotateY(225deg) translateZ(541px) scale(.8);">
+           <h1>8.2/10</h1>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(225deg) translateZ(541px) scale(.8);">
+           <h3><%=link_to "#{@hotel[4].name}", listing_path("#{@hotel[4].id}"), style:"text-decoration:none;"%></h3>
+           <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+				<div class="rating" style="-webkit-transform: rotateY(270deg) translateZ(541px) scale(.8);">
+           <h1>8.0/10</h1>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(270deg) translateZ(541px) scale(.8);">
+            <h3><%=link_to "#{@hotel[5].name}", listing_path("#{@hotel[5].id}"), style:"text-decoration:none;"%></h3>
+            <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+				<div class="rating" style="-webkit-transform: rotateY(315deg) translateZ(541px) scale(.8);">
+           <h1>8.0/10</h1>
+        </div>
+        <div class="carousel-caption" style="-webkit-transform: rotateY(315deg) translateZ(541px) scale(.8);">
+           <h3><%=link_to "#{@hotel[6].name}", listing_path("#{@hotel[6].id}"), style:"text-decoration:none;"%></h3>
+           <p>Details of Slide 1. Lorem Ipsum Blah Blah Blah....</p>
+        </div>
+
+
 			</div>
 		</div>
 
-		<div>
-			<div class="room__dls room__dls--fontSize19" style="width:100%" data-reactid="119">
-				<div class="container_p37oqd-o_O-container_staticWidth_mfbig2" data-reactid="120">
-					<div style="margin-top:0;margin-bottom:0;margin-left:0;margin-right:0;" data-reactid="121">
-						<div id="summary" data-reactid="122">
-						    <div class="row_2h22gn" style="max-width: 70%;" data-reactid="123">
-							    <div class="column_1rnz84d-o_O-column-lg-8_1gc3mvd" style="width:60%; padding-left:1%; margin:auto;" data-reactid="124">
-							    	<div id="watch-header" data-reactid="1000" class="yt-card yt-card-has-padding" style="width:120%; background-color:rgba(50,50,50,0.3); box-shadow: 0px 3px 5px rgba(0, 5, 2, 0.8); ">
-							    	
-							      	  	<div data-reactid="125">
-									        <div class="row hide-md" data-reactid="126">
-									          <div class="col-sm-12" data-reactid="127">
-									            <div data-reactid="128">
-									              <div data-reactid="130">
-									                <div class="innerContainer_1yboa9e" data-reactid="131">
-									                  <div class="container_e296pg" data-reactid="132">
-									                    <div class="containerOuter_1miw6zj-o_O-containerOuter_hideHorizontalScrollbar_1qowuqe" data-reactid="133">
-									                      <div class="containerInner_1hdjuur-o_O-containerInner_hideHorizontalScrollbar_ep4zv6" data-reactid="134">
-									                        <nav data-reactid="135">
-									                          <span class="text_5mbkop-o_O-size_small_1gg2mc-o_O-weight_bold_153t78d-o_O-inline_g86r3e" data-reactid="136">
-									                            <span class="anchor_18fdjt5" data-reactid="137">
-									                              <a href="#summary" class="component_9w5i1l-o_O-navigation_3mnosr" aria-disabled="false" aria-busy="false" data-reactid="138">
-									                                <span data-reactid="139" style="color:black;"">Overview</span>
-									                              </a>
-									                            </span>
-									                          </span>
-									                          
-									                        </nav>
-									                      </div>
-									                    </div>
-									                  </div>
-									                </div>
-									              </div>
-									            </div>
-									          </div>
-									        </div>
-									        <div class="row" data-reactid="179">
-									          <div class="col-sm-12" data-reactid="180">
-									            <div class="section-container" data-reactid="181">
-									              <div class="summary-container" data-reactid="182">
-									                <div class="row" data-reactid="183"><!-- awdawdaw-->
-									                	<div id="watch-header" class="yt-card yt-card-has-padding" style="width:98%; background-color:rgba(255,255,230,0.7); box-shadow: 0px 3px 5px rgba(0, 5, 2, 0.8); margin-left: 7px; ">
-										                  <div class="hide-sm col-md-10" data-reactid="184">
-										                    
-										                    <div itemprop="name" class="overflow summary-title-bottom-spacing title-2" id="listing_name" data-reactid="207">
-										                      <div style="float:left;"><%= @listing.name %></div>
-										                      
-										                      	<div class="xs-8--none" style="float:right; font-size:1.5vw; line-height:150%;" data-reactid="320">
-										                      	
-										                      		<%= button_to "Reserve", new_listing_reservation_path(@listing.id), method: :get %>
-										               				
-										                      	</div>
-										                    </div>
+	</div>
 
-										                    <div data-reactid="209">
-										                      <div id="display-address" class="text-muted" data-reactid="210">
-										                        <div style="margin-bottom:0; float:right;" data-reactid="211">
-										                          <span class="link-reset" data-reactid="212"><%= @listing.location %></span>
-										                            <span data-reactid="213"> &nbsp; </span>
-										                              <a href="#reviews" class="link-reset show-inline-block" data-reactid="214"><div class="star-rating-wrapper" itemscope="" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" aria-label="Average 5 out of 5 stars from 62 guest reviews" role="img" data-reactid="215">
-										                              </div>
-										                              </a>
-										                        </div>
-										                      </div>
-										                    </div>
-										                  </div>
-
-										                </div>
-
-									                  <div style="margin-top:24px;" data-reactid="288">
-									                    <div class="text-muted text-center" data-reactid="289">
-										                    <div style="margin-top:25px; margin-bottom:25px;" data-reactid="309">
-										                        <div class="rule_76irmj" data-reactid="310"></div>
-										                    </div>
-										                    <div class="row_2h22gn" style="padding-left:17px;" data-reactid="292">
-										                    	<div id="watch-header" class="yt-card yt-card-has-padding" style="width:98%; background-color:rgba(255,255,230,0.7); box-shadow: 0px 3px 5px rgba(0, 5, 2, 0.8); ">
-										                        	<span><%=@listing.description%></span>
-										                        	
-										                        </div>
-										                    </div>
-									                      <div style="margin-top:24px;margin-bottom:16px;" data-reactid="309">
-									                        <div class="rule_76irmj" data-reactid="310"></div>
-									                      </div>
-									                    </div>
-									                  </div>
-									                </div>
-									              </div>
-									            </div>
-									          </div>
-									        </div>
-									    </div>
-								        <div class="the descriptions"><!-- awdaw -->
-								          	<div id="watch-header" class="yt-card yt-card-has-padding" style="width:100%; background-color:rgba(255,255,230,0.7); box-shadow: 0px 3px 5px rgba(0, 5, 2, 0.8); ">
-								          		<div class="column_1rnz84d-o_O-column-sm-3_1c7jm1s"  data-reactid="293">
-
-					                          		<br data-reactid="295">
-					                          		<span class="text-small" data-reactid="296"><b>RM<%= @listing.price %></b> per night<span>
-					                        	</div>
-					                        	<div class="column_1rnz84d-o_O-column-sm-3_1c7jm1s" data-reactid="297">
-
-					                          		<br data-reactid="299">
-					                          		<span class="text-small" data-reactid="300">Suitable No. of Guest: <%=@listing.max_guests%></span>
-					                        	</div>
-					                        </div>
-								        </div><!-- awdawd -->
-								    </div>
-								    
-							    </div>
-							</div>
-
-						    <div class="column_1rnz84d-o_O-column-lg-8_1gc3mvd" style="float: right; max-width: 34%; margin-right: 13%; margin-left: 1%; padding-left: 0;" data-reactid="12412">
-						    	<div id="watch-header" class="yt-card yt-card-has-padding" style="width:88%; background-color:rgba(50,50,50,0.3); box-shadow: 0px 3px 5px rgba(0, 5, 2, 0.8); ">
-
-						      		<div data-reactid="125">
-								        <div class="row hide-md" data-reactid="126">
-								          <div class="col-sm-12" data-reactid="127">
-								            <div data-reactid="128">
-								              <div data-reactid="130">
-								                <div class="innerContainer_1yboa9e" data-reactid="131">
-								                  <div class="container_e296pg" data-reactid="132">
-								                    <div class="containerOuter_1miw6zj-o_O-containerOuter_hideHorizontalScrollbar_1qowuqe" data-reactid="133">
-								                      <div class="containerInner_1hdjuur-o_O-containerInner_hideHorizontalScrollbar_ep4zv6" data-reactid="134">
-								                        <nav data-reactid="135">
-								                          <span data-reactid="140">
-								                            <span class="text_5mbkop-o_O-size_small_1gg2mc-o_O-inline_g86r3e" data-reactid="141">
-								                              <span class="dot_t5g4kn" data-reactid="142">
-								                                <span aria-hidden="true" data-reactid="143"> · </span>
-								                              </span>
-								                            </span>
-								                            <span class="text_5mbkop-o_O-size_small_1gg2mc-o_O-inline_g86r3e" data-reactid="144">
-								                              <span class="anchor_18fdjt5" data-reactid="145">
-								                                <a href="#reviews" class="component_9w5i1l" aria-disabled="false" aria-busy="false" data-reactid="146">
-								                                  <span data-reactid="147" style="color:black; font-size:2vw;">Reviews</span>
-								                                </a>
-								                              </span>
-								                            </span>
-								                          </span>
-								                        </nav>
-								                      </div>
-								                    </div>
-								                  </div>
-								                </div>
-								              </div>
-								            </div>
-								          </div>
-								        </div>
-								    </div>
-
-								    <div class="the descriptions" style="padding-top:6.5%;"><!-- awdaw -->
-								        <div id="watch-header" class="yt-card yt-card-has-padding" style="width:100%; background-color:silver; box-shadow: 0px 3px 5px rgba(0, 5, 2, 0.8); ">
-											<% @listing.comments.each do |comment| %>
-											    
-												<div id="watch7-user-header" class=" spf-link ">
-												  	<a href="#" class="yt-user-photo g-hovercard yt-uix-sessionlink      spf-link " data-ytid="UClN0s_t1FmlrA7NcVlgL6sQ" data-sessionlink="itct=CDMQ4TkiEwiA_dKT5fHVAhVe12gKHaeBAjgo-B0">
-												      	<span class="video-thumb  yt-thumb yt-thumb-48 g-hovercard" data-ytid="UClN0s_t1FmlrA7NcVlgL6sQ">
-												    		<span class="yt-thumb-square">
-												      			<span class="yt-thumb-clip">
-											  						<img data-ytimg="1" alt="crybaby" src="<%=comment.user.avatars%>" onload=";window.__ytRIL &amp;&amp; __ytRIL(this)" width="48" height="48">
-															        <span class="vertical-align"></span>
-															    </span>
-														    </span>
-														</span>
-													</a>
-											  		<div class="yt-user-info">
-											    		<div class="g-hovercard yt-uix-sessionlinkspf-link " data-ytid="UClN0s_t1FmlrA7NcVlgL6sQ" data-sessionlink="itct=CDMQ4TkiEwiA_dKT5fHVAhVe12gKHaeBAjgo-B0" style="color:teal; font-size:80%;"><%=comment.user.name%></div>
-											  		</div>
-													<span id="watch7-subscription-container">
-														<span class=" yt-uix-button-subscription-container">
-															<div style="font-size:70%">
-																<%= comment.updated_at.strftime('%d %B %Y') %>
-															</div>
-														</span>
-													</span>
-												</div>
-											    <div id="watch8-action-buttons" class="watch-action-buttons clearfix">
-											    	<div id="watch7-headline" class="clearfix">
-												    	<div id="watch-headline-title">
-												      		<h1 class="watch-title-container" style="line-height:50%; width:100%; font-family: Georgia, Times New Roman Times, Serif, Arial; text-shadow: 0.15px 0px 0px #000; font-size:180%; margin:-1%;">
-												  				<span id="eow-title" class="watch-title" dir="ltr" title="Title of video or whatever" style="font-size:50%;">"<%=comment.description%>"</span>
-												      		</h1>
-												    	</div>
-												  	</div>
-												</div>
-												<div style="margin-top:24px;margin-bottom:16px;" data-reactid="309">
-									                <div class="rule_1176irmj"  data-reactid="310"></div>
-									            </div>
-											<% end %>
-										</div>
-									</div>
-							       	<!-- awdawd -->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	
 </body>
-
 
 <style>
-body {
-  background-color: grey;
+.carousel-caption
+			{
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				z-index: 10;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				color: #fff;
+				text-align: center;
+				background: rgba(0,0,0,0.4);
+			}
+.rating
+{
+	position: fixed;
+	right: 0;
+	bottom: 10;
+	left: 0;
+	z-index: 90;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	color: white;
 }
-#footer1 {
-  display:none;
-  clear: both;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  @media screen and (min-height: 400px) {
-      margin-bottom: -200px;
-  }
-  left: 0;
-  background-color: black;
-  color: white;
-  padding: 10px;
-  margin: auto;
-  ul {
-    li {
-      float: left;
-      margin-right: 20px;
-      list-style: none;
-      display: inline;
-    }
-  }
-}
-
 </style>
-
-<script>
-$(document).ready(function(){
-  $(".menu_1woac6s1").hide();
-  $(".link_cr2i2a1").click(function(event){
-    event.stopPropagation();
-    $(".menu_1woac6s1").toggle();
-  });
-
-  $(document).click(function(){
-      $('.menu_1woac6s1').hide();
-  });
-});
-$(document).ready(function(){
-  $(".menu_1woac6s5").hide();
-  $(".link_cr2i2a5").click(function(event){
-    event.stopPropagation();
-    $(".menu_1woac6s5").toggle();
-  });
-
-  $(document).click(function(){
-      $('.menu_1woac6s5').hide();
-  });
-});
-</script>
-
-
-</body>
