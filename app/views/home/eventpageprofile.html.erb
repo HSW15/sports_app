@@ -208,7 +208,7 @@ $('.load_modal').click( function() {
 												<button class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;height: 33px;padding-bottom: 29px;">Continue</a></button>
 												<% @order_item = current_order.order_items.new %>
 												<% @products = Product.all%>
-												<%= form_for @order_item do |f| %>
+												<%= form_for @order_item, remote:true do |f| %>
 													<div class="input-group input-xs col-xs-3" style="position:absolute;width:124px;left:45.2%;margin-top:-52.5px;">
 														<%= f.hidden_field :product_id, value: @products[2].id %>
 														<%= f.number_field :quantity, value: 0, class:"form-control input-sm", min: 1 %>
@@ -249,7 +249,7 @@ $('.load_modal').click( function() {
 						<button class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;height: 33px;padding-bottom: 29px;">Continue</a></button>
 						<% @order_item = current_order.order_items.new %>
 						<% @products = Product.all%>
-						<%= form_for @order_item do |f| %>
+						<%= form_for @order_item, remote: true do |f| %>
 							<div class="input-group input-xs col-xs-3" style="position:absolute;width:124px;left:45.2%;margin-top:-55px;">
 								<%= f.hidden_field :product_id, value: @products[2].id %>
 								<%= f.number_field :quantity, value: 0, class:"form-control input-sm", min: 1 %>
@@ -314,12 +314,12 @@ $('.load_modal').click( function() {
 						<button class="tickets"><a href="listings" class="btn" style="margin-top: 4px; background: #ee7600;height: 33px;padding-bottom: 29px;">Continue</a></button>
 						<% @order_item = current_order.order_items.new %>
 						<% @products = Product.all%>
-						<%= form_for @order_item do |f| %>
+						<%= form_for @order_item, remote: true do |f| %>
 							<div class="input-group input-xs col-xs-3" style="position:absolute;width:124px;left:45.2%;margin-top:-55px;">
 								<%= f.hidden_field :product_id, value: @products[2].id %>
 								<%= f.number_field :quantity, value: 0, class:"form-control input-sm", min: 1 %>
 								<div class="input-group-btn">
-									<%= f.submit "Add to cart", class:"btn btn-primary btn-sm" %>
+									<%= f.submit "Add to cart",class:"btn btn-primary btn-sm" %>
 								</div>
 							</div>
 					<% end %>
