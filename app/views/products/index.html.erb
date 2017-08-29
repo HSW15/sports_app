@@ -40,13 +40,13 @@
     <section class="gallery" style="margin-top:-170px;">
   		<div class="prices" style="margin-left:auto;margin-right:auto;">
       <h3 style="color:white;font-size:21px;margin-bottom:-14px;text-align:center;">Training Pass</h3>
-      <% @train = Listing.where(purpose:"train").order("name").page(params[:page]).per(4) %>
+      <% @train = Listing.where(purpose:"train").order("name").page(params[:page]).per(5) %>
 			<div class="img"><img src="<%=@train[2].photos%>"></div>
       <div class="img"><img src="<%=@train[1].photos%>"></div>
       <div class="img" style="position:absolute;"><img src="<%=@train[3].photos%>">
         <% @product = @products[0] %>
         <%= form_for @order_item do |f| %>
-          <div class="input-group input-xs col-xs-3" style="position:absolute;bottom:8px;right:62px;">
+          <div class="input-group input-xs col-xs-3" style="position:absolute;bottom:37.5px;right:62px;">
             <%= f.hidden_field :product_id, value: @product.id %>
             <%= f.number_field :quantity, value: 0, class:"form-control input-sm", style:"width:45px;", min: 0 %>
             <div class="input-group-btn">
@@ -73,7 +73,7 @@
       <div class="img" style="position:absolute;"><img src="<%=@nutrition[3].photos%>">
         <% @product1 = @products[1] %>
         <%= form_for @order_item do |f| %>
-          <div class="input-group input-xs col-xs-3" style="position:absolute;bottom:8px;right:62px;">
+          <div class="input-group input-xs col-xs-3" style="position:absolute;bottom:37.5px;right:62px;">
             <%= f.hidden_field :product_id, value: @product1.id %>
             <%= f.number_field :quantity, value: 0, class:"form-control input-sm", style:"width:45px;", min: 0 %>
             <div class="input-group-btn">
@@ -160,7 +160,7 @@
 
 	<hr>
 
-  <div class="guidebooks" style="width:940px;margin-left:auto;margin-right:auto;">
+  <div class="guidebooks" style="width:940px;margin-left:auto;margin-right:auto;margin-top:0px;">
 
 			<h3 style="color:white;font-size:21px;margin-bottom:-50px;text-align:center;">Free Sport-Travel Guide</h3>
 
@@ -193,8 +193,11 @@
 				<p style="color:white;margin-top:3px;">18,795 places</p>
 			</div>
 
-
 		</div>
+    <div class="tickets",style="margin-top:58px;">
+      <%= button_to "Continue", user_path(current_user.id), class:"btn", style:"background: #ee7600;margin-top:275px;margin-left:10px;", method: :get%>
+    </div>
+
 
 
 

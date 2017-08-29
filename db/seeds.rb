@@ -60,8 +60,12 @@ ActiveRecord::Base.transaction do
     Listing.create(name: "Be Lohas Healthy Cuisine", location:"Jalan Batu Ambar, Taman Kok Lian, 51200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia", description:"Find out about the role fats play in a healthy diet, including saturated fats and unsaturated fats.", price: 0, max_guests: 1, purpose: "nutrition", photos: "https://s3.amazonaws.com/media.a-q-c-a.com/sitebuilder/new/249/healthy-foods-for-kidneys.jpg" )
 
 
-    Product.create(name:"Fitness Pass", price:15)
-    Product.create(name:"Nutrition Pass", price:20)
+    Product.create(name:"Fitness Pass", price:15, photos: "https://www.countryandtownhouse.co.uk/wp-content/uploads/2017/02/BXR-BoxingGym.jpg")
+
+    Product.create(name:"Nutrition Pass", price:20, photos: "http://amillerrd.ca/wp-content/uploads/2016/03/Eggs-on-Toast.jpg")
+
+    Product.create(name:"Ticket", price:50, photos:"https://images4.alphacoders.com/214/214844.jpg")
+
     Product.create(name:"Travelers Pass", price: 50)
 
       # listing['name'] = Faker::App.name
