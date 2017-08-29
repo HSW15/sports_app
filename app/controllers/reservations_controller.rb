@@ -15,7 +15,7 @@ class ReservationsController < ApplicationController
   def create
     @user = current_user
     params[:reservation][:total] = (params[:reservation][:start_date]..params[:reservation][:end_date]).to_a.length * @listing.price
-    byebug
+
     # params[:reservation][:listing_id] = @listing.id
     @reservation =  @user.reservations.new(reservation_params)
     @reservation.listing_id = @listing.id
