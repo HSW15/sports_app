@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   get "reservations/:id/payment", to: "reservations#payment", as: "go_payment"
   post "reservations/:id/checkout", to: "reservations#checkout", as: "go_checkout"
+  get "maps", to: "home#maps", as: "maps"
   # get '/listings/:listing_id/reservations/:id', to: 'reservations#destroy', as: 'cancel'
 
   # Cart

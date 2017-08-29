@@ -1,4 +1,18 @@
 
+3.102536, 101.641274 hiltonpj
+3.154256, 101.706234 Shangri-la
+3.155673, 101.705984 concorde kl
+3.117951, 101.678303 cititel Midvalley
+3.147329, 101.715653 Dorsett
+3.140010, 101.710125 Furuma
+3.136379, 101.686163 meridian
+3.025944, 101.615259
+
+
+
+
+
+
 <!-- <% @reservations.each do |reservation| %>
 <li class="cart-item">
 <i class="fa fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 5px;right: 6px;"></i>

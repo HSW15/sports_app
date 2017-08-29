@@ -1,0 +1,27 @@
+<html>
+<body>
+
+<div id="map" style="width:100%;height:500px"></div>
+
+<script>
+function myMap() {
+  // 45 Degree View
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(3.102536, 101.641274),
+    zoom:18,
+    mapTypeId:google.maps.MapTypeId.HYBRID
+  };
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  // Marker
+  var myCenter = new google.maps.LatLng(3.102536, 101.641274);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYOX56SgWEnIIPFWDKJ0SUIIs28oSOYP0&callback=myMap"></script>
+
+</body>
+</html>

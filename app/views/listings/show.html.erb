@@ -90,7 +90,7 @@
 
 										                    <div data-reactid="209">
 										                      <div id="display-address" class="text-muted" data-reactid="210">
-										                        <div style="margin-bottom:0; float:right; font-size:15px;" data-reactid="211">
+										                        <div style="margin-bottom:0; float:left; font-size:15px;" data-reactid="211">
 										                          <span class="link-reset" data-reactid="212"><%= @listing.location %></span>
 										                            <span data-reactid="213"> &nbsp; </span>
 										                              <a href="#reviews" class="link-reset show-inline-block" data-reactid="214"><div class="star-rating-wrapper" itemscope="" itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating" aria-label="Average 5 out of 5 stars from 62 guest reviews" role="img" data-reactid="215">
@@ -234,6 +234,27 @@
 				</div>
 			</div>
 		</div>
+		<div id="map" style="width:81%;height:300px;bottom:-112px;margin-bottom:50px;left:128px;border:solid;border-color:gray;"></div><br><br><br>
+
+		<script>
+		function myMap() {
+		  // 45 Degree View
+		  var mapCanvas = document.getElementById("map");
+		  var mapOptions = {
+		    center: new google.maps.LatLng("<%=@listing.latitude%>", "<%=@listing.longitude%>"),
+		    zoom:18,
+		    mapTypeId:google.maps.MapTypeId.HYBRID
+		  };
+		  var map = new google.maps.Map(mapCanvas,mapOptions);
+		  // Marker
+		  var myCenter = new google.maps.LatLng("<%=@listing.latitude%>", "<%=@listing.longitude%>");
+		  var marker = new google.maps.Marker({position:myCenter});
+		  marker.setMap(map);
+		}
+		</script>
+
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYOX56SgWEnIIPFWDKJ0SUIIs28oSOYP0&callback=myMap"></script>
 </body>
 
 
