@@ -1,85 +1,108 @@
-
-<section style="background: url(<%= @listing.photos %>) no-repeat center center fixed; background-size:100%; display:block;" class="reservation_image_body">
-    <div class="container clearfix">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="home-search dark center ">
-                    <div class="home-search-main heading-block center">
-                        <div style="font-size:18px;font-weight:bold;">Hotel Reservations &nbsp;&nbsp; 
-                   
-                            <a style="margin-left:20px;" class="ahref_just_forlisting_show" href="http://groups.reservations.com/" target="_blank">Group Bookings</a>
-                        </div>
-                        <h1 data-animate="fadeInUp" data-delay="200" class="fadeInUp animated">Reserve Your Hotel</h1>
-                        <span data-animate="fadeInUp" data-delay="300" class="fadeInUp animated">
-                            <strong>Select from over 150,000 hotels around the world <br>Book online or call 
-                                <span class="booking-phone">855-516-1090</span>
-                            </strong>
-                        </span>
-                    </div>
-
-                    <div class="">
-                        <form id="homesearch" action="/hotel/results" method="GET" novalidate="novalidate">
-                            <input id="rc-ro" name="rc-ro" value="1" type="hidden">
-                            <input id="rc-lo" name="rc-lo" value="" class="rc-cl-lo" type="hidden">
-                            <input id="rc-lt" name="rc-lt" value="" class="rc-cl-lt" type="hidden">
-                            <div class="row">
-                                <div class="col-md-1 "></div>
-                                <div class="col-md-4 ">
-                                    <div class="input-group">                       
-                                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-                                        <input value="" id="rc-ci" name="rc-ci" data-val="true" data-val-required="" class="sm-form-control tleft past-enabled not-dark rc-cl-ci ui-autocomplete-input" placeholder="Destination City, Airport or Hotel" autocomplete="off" type="text">
-                                        <span class="input-group-addon not-dark" style="padding: 9px 12px;">
-                                            <i class="icon-map-marker"></i>
-                                        </span>
-                                        <span style="display:none" class="field-validation-valid" data-valmsg-for="rc-ci" data-valmsg-replace="true"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 ">
-                                    <div class="input-group">
-                                        <input id="rc-ar" name="rc-ar" data-val="true" data-val-required="" value="" class="sm-form-control tleft past-enabled not-dark datepicka hasDatepicker" placeholder="Check in date" type="text">
-                                        <span class="input-group-addon" style="padding: 9px 12px;">
-                                            <i class="icon-calendar2"></i>
-                                        </span>
-                                        <span style="display:none" class="field-validation-valid" data-valmsg-for="rc-ar" data-valmsg-replace="true"></span>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 ">
-                                    <div class="input-group">
-                                        <input id="rc-de" name="rc-de" data-val="true" data-val-required="" value="" class="sm-form-control tleft past-enabled not-dark datepicka hasDatepicker" placeholder="Check out date" type="text">
-                                        <span class="input-group-addon" style="padding: 9px 12px;">
-                                            <i class="icon-calendar2"></i>
-                                        </span>
-                                        <span style="display:none" class="field-validation-valid" data-valmsg-for="rc-de" data-valmsg-replace="true"></span>
-                                    </div>          
-                                </div>
-                                <div class="col-md-1 "></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 center">
-                                    <div class="topmargin-sm">
-                                        <div class="btn-group">
-                                            <button type="submit" class="btn btn-lg btn-danger">Search</button>
-                                            <button type="submit" class="btn btn-lg btn-danger">Popular</button>
-                                            <button type="submit" class="btn btn-lg btn-danger">Luxe</button>
-                                            <button type="submit" class="btn btn-lg btn-danger">Cheap</button>
-                                        </div>&nbsp;&nbsp;
-                                        <a href="http://groups.reservations.com" target="_blank" class="btn btn-lg btn-danger nomargin" value="submit" type="submit" style="">Groups (5+ Rooms)</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+<html class="page2html">
+<body class="page2body">
 
 <% if @reservation.errors.full_messages.present? %>
 <%= @reservation.errors.full_messages %>
 <% end %>
+<div class="form">
+
+  <h1 style="font-size:23px;">Live at <%=@listing.name%></h1>
 
 
+<%= form_for [@listing, @reservation] do |f| %>
+
+  <div class="field-wrap">
+    <div class="text-field">
+
+      <%= f.date_field :start_date, min:Date.today, class:"special", style:"padding:6px;", value:Date.today %>
+
+    </div>
+  </div>
+
+  <div class="field-wrap" style="margin-top:-6.5px;">
+    <div class="text-field">
+    <!-- <label>
+      Check-Out<span class="req">*</span>
+    </label> -->
+    <!-- <%= f.date_select :end_date, {:include_blank => true, :default => nil} %> -->
+    <%= f.date_field :end_date, min:Date.today, class:"special", style:"padding:6px;", value:Date.today %>
+    </div>
+  </div>
+
+
+
+
+  <div class="field-wrap">
+    <div class="text-field">
+    <label>
+      Number Of Guests<span class="req">*</span>
+    </label>
+    <%= f.text_field :num_guests %>
+    </div>
+  </div>
+
+
+
+  <button class="button button-block" style="padding: 0;
+  border: none;"/><%= f.submit%></button>
+  <%end%>
+
+  </div>
+</div>
+</body>
+</html>
+
+<script>
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+  var $this = $(this),
+      label = $this.prev('label');
+
+	  if (e.type === 'keyup') {
+			if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+    	if( $this.val() === '' ) {
+    		label.removeClass('active highlight');
+			} else {
+		    label.removeClass('highlight');
+			}
+    } else if (e.type === 'focus') {
+
+      if( $this.val() === '' ) {
+    		label.removeClass('highlight');
+			}
+      else if( $this.val() !== '' ) {
+		    label.addClass('highlight');
+			}
+    }
+
+});
+
+$('.tab a').on('click', function (e) {
+
+  e.preventDefault();
+
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+
+  $(target).fadeIn(600);
+
+});
+</script>
+
+
+
+
+
+<!--
 <h1 style="color:white;text-align:center;"> Live at <%=@listing.name%> </h1><br>
 
 <div style="width:400px;margin-left:auto;margin-right:auto;">
@@ -102,10 +125,113 @@
   <%= f.submit%>
 </div>
 <% end %>
-</div>
+</div> -->
 
+<!-- <section style="background: url(<%= @listing.photos %>) no-repeat center center fixed; background-size:100%; display:block;" class="reservation_image_body">
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="home-search dark center ">
+                    <div class="home-search-main heading-block center">
+                        <div style="font-size:18px;font-weight:bold;">Hotel Reservations &nbsp;&nbsp;
+
+                            <a style="margin-left:20px;" class="ahref_just_forlisting_show" href="http://groups.reservations.com/" target="_blank">Group Bookings</a>
+                        </div>
+                        <h1 data-animate="fadeInUp" data-delay="200" class="fadeInUp animated">Reserve Your Hotel</h1>
+                        <span data-animate="fadeInUp" data-delay="300" class="fadeInUp animated">
+                            <strong>Select from over 150,000 hotels around the world <br>Book online or call
+                                <span class="booking-phone">855-516-1090</span>
+                            </strong>
+                        </span>
+                    </div>
+
+                    <div class=display:none>
+                        <form id="homesearch" action="/hotel/results" method="GET" novalidate="novalidate">
+                            <input id="rc-ro" name="rc-ro" value="1" type="hidden">
+                            <input id="rc-lo" name="rc-lo" value="" class="rc-cl-lo" type="hidden">
+                            <input id="rc-lt" name="rc-lt" value="" class="rc-cl-lt" type="hidden">
+                            <div class="row">
+                                <div class="col-md-1 "></div>
+                                <div class="col-md-4 ">
+                                    <div class="input-group">
+                                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                                        <input value="" id="rc-ci" name="rc-ci" data-val="true" data-val-required="" class="sm-form-control tleft past-enabled not-dark rc-cl-ci ui-autocomplete-input" placeholder="Destination City, Airport or Hotel" autocomplete="off" type="text">
+                                        <span class="input-group-addon not-dark" style="padding: 9px 12px;">
+                                            <i class="icon-map-marker"></i>
+                                        </span>
+                                        <span style=display:none class="field-validation-valid" data-valmsg-for="rc-ci" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 ">
+                                    <div class="input-group">
+                                        <input id="rc-ar" name="rc-ar" data-val="true" data-val-required="" value="" class="sm-form-control tleft past-enabled not-dark datepicka hasDatepicker" placeholder="Check in date" type="text">
+                                        <span class="input-group-addon" style="padding: 9px 12px;">
+                                            <i class="icon-calendar2"></i>
+                                        </span>
+                                        <span style="" class="field-validation-valid" data-valmsg-for="rc-ar" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 ">
+                                    <div class="input-group">
+                                        <input id="rc-de" name="rc-de" data-val="true" data-val-required="" value="" class="sm-form-control tleft past-enabled not-dark datepicka hasDatepicker" placeholder="Check out date" type="text">
+                                        <span class="input-group-addon" style="padding: 9px 12px;">
+                                            <i class="icon-calendar2"></i>
+                                        </span>
+                                        <span style="display:none" class="field-validation-valid" data-valmsg-for="rc-de" data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 "></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 center">
+                                    <div class="topmargin-sm">
+                                        <div class="btn-group">
+                                            <button type="submit" class="btn btn-lg btn-danger">Search</button>
+                                            <button type="submit" class="btn btn-lg btn-danger">Popular</button>
+                                            <button type="submit" class="btn btn-lg btn-danger">Luxe</button>
+                                            <button type="submit" class="btn btn-lg btn-danger">Cheap</button>
+                                        </div>&nbsp;&nbsp;
+                                        <a href="http://groups.reservations.com" target="_blank" class="btn btn-lg btn-danger nomargin" value="submit" type="submit" style="">Groups (5+ Rooms)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker5').datetimepicker({
+                        minDate: "<%=DateTime.now%>",
+                        defaultDate: "<%=DateTime.now%>",
+                        disabledDates: [
+                            moment("12/25/2013"),
+                            new Date(2013, 11 - 1, 21),
+                            "11/22/2013 00:53"
+                        ]
+                    });
+              $("#datetimepicker5").on("dp.change", function (e) {
+               $('#datetimepicker6').data("DateTimePicker").minDate(e.date);
+           });
+                });
+                $(function () {
+                    $('#datetimepicker6').datetimepicker({
+                        minDate: "<%=DateTime.now%>",
+                        defaultDate: "<%=DateTime.now%>",
+                        disabledDates: [
+                            moment("12/25/2013"),
+                            new Date(2013, 11 - 1, 21),
+                            "11/22/2013 00:53"
+                        ]
+                    });
+                $("#datetimepicker6").on("dp.change", function (e) {
+                $('#datetimepicker5').data("DateTimePicker").maxDate(e.date);
+            });
+                });
+            </script>
 <style>
-body {background-color:grey;}
-</style>
+#footer1 {display:none};
 
-</section>
+</style>

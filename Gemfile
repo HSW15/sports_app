@@ -35,6 +35,7 @@ gem 'rest-client'
 #14. Datepicker gems
 gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
+gem 'bootstrap-datepicker-rails'
 # 15. Redis
 gem 'redis'
 gem 'hiredis'

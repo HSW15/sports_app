@@ -48,7 +48,9 @@
 					<div class="col2 first">
 						<img src="http://images.contactmusic.com/newsimages/david_beckham_1133321.jpg" alt="">
 						<h1>david beckham</h1>
-						<p><p>Professional soccer player, husband, father. England.<br><i><%= current_user.name %></i></br></p>
+						<p><p>Professional soccer player, husband, father. England.<br>
+              <!-- <a href="http://bit.ly/2wDhryU">Learn about the a href attribute</a> -->
+              <!-- <i><%= current_user.name %></i></br></p> -->
 
 
 					</div>
@@ -66,6 +68,7 @@
           <li><i class="fa fa-check"></i> <%=link_to "My Reservations", user_path, :style=>"text-decoration:none;"%> </li>
           <li><i class="fa fa-list-alt"></i> <%=link_to "Travel Guide", listings_path, :style=>"text-decoration:none;"%> </li>
           <li><i class="fa fa-bar-chart"></i><%=link_to "Events", events_show_path, :style=>"text-decoration:none;"%></li>
+          <!-- <li><i class="fa fa-star"></i><%=link_to "Favorites", events_show_path, :style=>"text-decoration:none;"%></li> -->
           <li><i class="fa fa-dashboard "></i> Manage Profile </li>
         </ul>
       </div>
@@ -80,7 +83,7 @@
 		<div class="prices" style="margin-left:auto;margin-right:auto;">
 
       <% current_user.reservations.each do |x| %>
-
+      <% @reservation = Reservation.find(x.id) %>
       <% @listing = Listing.find(x.listing_id) %>
       <!-- <div class="description" style="text-align:center;">
         <h3 style="font-weight:thick;">Formula 1 Grand Prix</h3>
@@ -89,7 +92,7 @@
 			<div class="img"><img src="https://a2.muscache.com/im/pictures/6152848/b04eddeb_original.jpg?aki_policy=x_medium"></div>
       <div class="img"><img src="https://a2.muscache.com/im/pictures/34792065/bae84a3f_original.jpg?aki_policy=x_medium"></div>
       <div class="img" style="position:absolute;"><img src="https://a2.muscache.com/im/pictures/1faf9a4c-f839-44da-bd37-65ddc928379e.jpg?aki_policy=x_medium">
-        <%=link_to (listing_reservation_path(x.id)), method: :delete do %>
+        <%=link_to "/listings/#{@listing.id}/reservations/#{@reservation.id}", method: :delete do %>
           <i class="fa fa-2x fa-window-close" aria-hidden="true" style="color:white;position:absolute;top: 10px;right: 9px;"></i>
         <% end %>
       </div>
@@ -102,7 +105,7 @@
             <% if x.payment != true %>
             <%= button_to "Make Payment", go_payment_path(x.id),  :style=>"text-decoration:none;width:110px;margin-left:-7.5px;", class:"btn-primary btn btn-sm", method: :get%>
             <% else %>
-            <button class="btn-warning btn btn-sm" style="width:110px;"> Paid </button>
+            <button class="btn-warning btn btn-sm" style="width:110px;margin-left:-11px;"> Paid </button>
             <% end %>
 				</div>
 

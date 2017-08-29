@@ -15,6 +15,7 @@ class ReservationsController < ApplicationController
   def create
     @user = current_user
     params[:reservation][:total] = (params[:reservation][:start_date]..params[:reservation][:end_date]).to_a.length * @listing.price
+    byebug
     # params[:reservation][:listing_id] = @listing.id
     @reservation =  @user.reservations.new(reservation_params)
     @reservation.listing_id = @listing.id
@@ -24,7 +25,7 @@ class ReservationsController < ApplicationController
       @update = current_order.total_price + @reservation.total
       # byebug
       current_order.update(total_price:@update)
-      redirect_to root_path
+      redirect_to products_path
     else
       @errors = @reservation.errors.full_messages
       render "new"
@@ -32,16 +33,17 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
+    # byebug
     @reservation = Reservation.find(params[:id])
     @user = User.find(@reservation.user_id)
     @reservation.destroy
     flash[:notice] = "Reservation is deleted"
-    redirect_to home_path
+    redirect_to current_user
   end
 
   def payment
     @client_token = Braintree::ClientToken.generate
-    
+
   end
 
   def checkout
@@ -50,7 +52,7 @@ class ReservationsController < ApplicationController
     nonce_from_the_client = params[:checkout_form][:payment_method_nonce]
 
     result = Braintree::Transaction.sale(
-      :amount => @reservation.total, #this is currently hardcoded
+      :amount => current_order.total_price, #this is currently hardcoded
       :payment_method_nonce => nonce_from_the_client,
       :options => {
         :submit_for_settlement => true
@@ -58,6 +60,7 @@ class ReservationsController < ApplicationController
     )
     if result.success?
       @reservation.update(payment:true)
+      session[:order_id] = nil
       # byebug
       redirect_to current_user, :flash => {:success => "Transaction successful!"}
     else

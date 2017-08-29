@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base
     else
       @current_order = Order.create(user_id:current_user.id)
       session[:order_id] = @current_order.id
+      return @current_order
       # byebug
     end
   end
